@@ -645,6 +645,7 @@ dialog::backdrop { background: rgba(27, 27, 24, .5); }
   window.SITE_DATA = {
     profile: {
       prototype: true,
+      banner: false,
       name: "Mrinall Samal",
       headline: "",
       lede: "Hi, I'm Mrinall, a CS student from Bhubaneswar who builds software people actually use. For a week I've been pitching real creators on Wispr Flow, keeping score of what works, and talking my decisions out loud as I go. It's all below, including what went wrong.",
@@ -1897,7 +1898,7 @@ function renderAll() { renderHero(); renderDays(); renderFeatured(); renderLedge
 function init() {
   state = loadState();
   state.profile.about ||= []; state.profile.mistakes ||= [];
-  $("#demo-banner").hidden = !state.profile.prototype;
+  $("#demo-banner").hidden = !state.profile.prototype || state.profile.banner === false;
   drawCharacters(); buildScorerForm(); buildModel(); buildPresets(); renderTools(); renderEditBar(); renderAll(); setupSpy();
 }
 

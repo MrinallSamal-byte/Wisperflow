@@ -1054,7 +1054,7 @@ function renderAll() { renderHero(); renderDays(); renderFeatured(); renderLedge
 function init() {
   state = loadState();
   state.profile.about ||= []; state.profile.mistakes ||= [];
-  $("#demo-banner").hidden = !state.profile.prototype;
+  $("#demo-banner").hidden = !state.profile.prototype || state.profile.banner === false;
   drawCharacters(); buildScorerForm(); buildModel(); buildPresets(); renderTools(); renderEditBar(); renderAll(); setupSpy();
 }
 

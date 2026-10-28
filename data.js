@@ -12,6 +12,7 @@
   window.SITE_DATA = {
     profile: {
       prototype: true,
+      banner: false,
       name: "Mrinall Samal",
       headline: "",
       lede: "Hi, I'm Mrinall, a CS student from Bhubaneswar who builds software people actually use. For a week I've been pitching real creators on Wispr Flow, keeping score of what works, and talking my decisions out loud as I go. It's all below, including what went wrong.",

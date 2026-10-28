@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mrinall Samal: outreach sprint for Wispr Flow India</title>
+<meta name="description" content="A growth portfolio built with voice: real creator outreach, a tool to pick who to pitch, and the spoken log behind both.">
+<meta name="theme-color" content="#fdfce8">
+<meta property="og:title" content="Applying to Wispr Flow's growth team by doing the work">
+<meta property="og:description" content="Real creator outreach, a tool to choose who to pitch, and a voice log of every decision.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#sprint">Skip to the results</a>
+
+<div id="demo-banner" class="banner" hidden>Prototype with sample data. Every creator, number and log entry on this page is invented.</div>
+
+<header class="top">
+  <a class="brand" href="#top" id="brand"></a>
+  <nav aria-label="Sections">
+    <a href="#sprint">Who I contacted</a>
+    <a href="#scorer">How I chose</a>
+    <a href="#log">Voice log</a>
+    <a href="#hinglish" id="hinglish-link">Hinglish test</a>
+    <a href="#plan" id="plan-link">My plan</a>
+    <a class="pill-link" href="#about">About me</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <svg class="squig s1" viewBox="-40 -40 800 280" aria-hidden="true"><path d="M0 150 C110 40 250 30 300 105 C340 170 250 195 240 130 C232 70 330 30 450 75 C560 115 640 70 720 20"/></svg>
+    <svg class="squig s2" viewBox="-40 -40 800 280" aria-hidden="true"><path d="M0 150 C110 40 250 30 300 105 C340 170 250 195 240 130 C232 70 330 30 450 75 C560 115 640 70 720 20"/></svg>
+    <div class="char c1" data-shirt="#ffa64a" data-hair="#1b1b18" data-lens="#03493f" aria-hidden="true"></div>
+    <div class="char c2" data-shirt="#ff6b4f" data-hair="#ffa64a" data-lens="#edd6ff" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <p class="dayline" id="dayline"></p>
+      <h1 id="h1"></h1>
+      <p class="lede" id="lede"></p>
+      <div class="flowbar" id="flowbar" hidden aria-hidden="true">
+        <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="said" id="said"></span>
+      </div>
+      <div class="hero-btns">
+        <a class="btn" href="#sprint">See the results</a>
+        <a class="btn ghost" href="#log">Hear it in my words</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap numbers" aria-label="Outreach results so far">
+    <div class="funnel" id="funnel"></div>
+    <p class="voice-line" id="voiceline"></p>
+    <div class="days" id="days"></div>
+  </section>
+
+  <section id="sprint" class="band taupe" aria-labelledby="sprint-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="sprint-h">Who I contacted</h2>
+        <p>Real creators, what I sent, what came back, and what I learned. Tap a name to read the whole thing.</p>
+      </div>
+      <div id="today"></div>
+      <div id="featured"></div>
+      <div class="toolbar">
+        <div class="chips" id="status-chips" role="group" aria-label="Filter by status"></div>
+        <div class="tools" id="sprint-tools"></div>
+      </div>
+      <div class="ledger card" id="ledger"></div>
+      <div class="board" id="board" hidden></div>
+      <div class="insights" id="insights"></div>
+      <div id="quotes"></div>
+      <div id="mypost"></div>
+    </div>
+  </section>
+
+  <section id="scorer" class="band" aria-labelledby="scorer-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="scorer-h">How I chose who to pitch</h2>
+        <p>I got tired of guessing, so I built a small tool. Put in a creator's public numbers and it tells you whether they're worth a message, and writes a first draft. Every weight is mine, and you can change them.</p>
+      </div>
+      <div class="presets" id="presets"></div>
+      <div class="scorer">
+        <form class="card inputs" id="scorer-form" autocomplete="off"></form>
+        <div class="card result" id="scorer-result" aria-live="polite"></div>
+      </div>
+      <details class="model card" id="model">
+        <summary>See the weights and assumptions</summary>
+        <div class="model-body" id="model-body"></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="log" class="band taupe" aria-labelledby="log-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="log-h">My voice log</h2>
+        <p>I talk through decisions and mistakes as they happen and save them as they come out. The purple parts are the raw dictation, fillers and all.</p>
+      </div>
+      <div id="videos"></div>
+      <div id="composer"></div>
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter log by type"></div>
+      <div id="timeline"></div>
+    </div>
+  </section>
+
+  <section id="hinglish" class="band" aria-labelledby="hinglish-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="hinglish-h">I tested Wispr Flow in Hinglish</h2>
+        <p>Most people I know switch between Hindi and English mid-sentence. So I checked how it handles that, using phrases I actually say.</p>
+      </div>
+      <div id="hinglish-body"></div>
+    </div>
+  </section>
+
+  <section id="plan" class="band taupe" aria-labelledby="plan-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="plan-h">What I'd do next</h2>
+        <p>Everything above, turned into a plan for the India growth team.</p>
+      </div>
+      <h3 class="sub">My first month</h3>
+      <div class="plan" id="plan-body"></div>
+      <div id="experiments"></div>
+      <div id="brief"></div>
+    </div>
+  </section>
+
+  <section id="about" class="band" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="about-h">About me</h2>
+      </div>
+      <div class="about" id="about-body"></div>
+      <div id="casestudy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap" id="foot"></div></footer>
+
+<dialog id="dlg"></dialog>
+<div class="editbar" id="editbar" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

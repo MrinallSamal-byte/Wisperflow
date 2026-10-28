@@ -1,0 +1,1909 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mrinall Samal: outreach sprint for Wispr Flow India</title>
+<meta name="description" content="A growth portfolio built with voice: real creator outreach, a tool to pick who to pitch, and the spoken log behind both.">
+<meta name="theme-color" content="#fdfce8">
+<meta property="og:title" content="Applying to Wispr Flow's growth team by doing the work">
+<meta property="og:description" content="Real creator outreach, a tool to choose who to pitch, and a voice log of every decision.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #fdfce8;
+  --taupe: #e7e5d2;
+  --card: #fffff2;
+  --ink: #1b1b18;
+  --muted: #5c5c50;
+  --line: #cfcdb6;
+  --green: #03493f;
+  --green-soft: #cfe9dd;
+  --lav: #edd6ff;
+  --lav-deep: #c9a2f5;
+  --orange: #ffa64a;
+  --orange-soft: #ffe3c2;
+  --coral: #ff6b4f;
+  --bad: #b3341f;
+  --serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --gutter: clamp(18px, 4vw, 40px);
+  --max: 1080px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { margin: 0; background: var(--cream); color: var(--ink); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+[hidden] { display: none !important; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+.banner { background: var(--lav); border-bottom: 2px solid var(--ink); padding: 8px var(--gutter); font-weight: 600; font-size: 14px; text-align: center; }
+
+/* ---------- top bar ---------- */
+.top {
+  position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px var(--gutter); background: color-mix(in srgb, var(--cream) 92%, transparent); backdrop-filter: blur(8px);
+  border-bottom: 1.5px solid var(--ink);
+}
+.brand { font: 800 20px/1 var(--sans); text-decoration: none; letter-spacing: -0.02em; }
+.top nav { display: flex; gap: 22px; align-items: center; font-size: 15px; font-weight: 600; }
+.top nav a { text-decoration: none; }
+.top nav a:not(.pill-link):hover { text-decoration: underline; text-underline-offset: 4px; }
+.pill-link { background: var(--green); color: #fff; padding: 8px 18px; border-radius: 999px; }
+@media (max-width: 720px) { .top nav a:not(.pill-link) { display: none; } }
+
+/* ---------- hero ---------- */
+.skip { position: absolute; left: -999px; top: 8px; z-index: 100; background: var(--green); color: #fff; padding: 8px 16px; border-radius: 999px; }
+.skip:focus { left: 8px; }
+.hero { position: relative; overflow: hidden; border-bottom: 1.5px solid var(--ink); padding: clamp(64px, 9vw, 128px) 0 clamp(88px, 10vw, 144px); text-align: center; }
+.hero-in { position: relative; z-index: 2; }
+.dayline { margin: 0 0 24px; font-size: 14px; font-weight: 600; letter-spacing: 0.02em; color: var(--muted); }
+h1 { margin: 0 auto; max-width: 16ch; font: 400 clamp(26px, 4vw, 44px)/1.15 var(--sans); letter-spacing: -0.015em; }
+h1 .big { display: block; margin-top: 8px; font-weight: 800; font-size: clamp(48px, 9.5vw, 104px); line-height: 0.98; letter-spacing: -0.045em; color: var(--green); }
+.lede { max-width: 56ch; margin: 32px auto 0; font-size: clamp(17px, 2vw, 20px); }
+.hero-btns { margin-top: 40px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.flowbar { display: flex; align-items: center; gap: 16px; max-width: 560px; margin: 32px auto 0; padding: 14px 22px; text-align: left; background: var(--lav); border: 2px solid var(--ink); border-radius: 999px; }
+.flowbar .bars { display: flex; align-items: center; gap: 4px; height: 28px; flex: none; }
+.flowbar .bars i { display: block; width: 5px; height: 100%; border-radius: 3px; background: var(--green); transform-origin: center; animation: eq 1.1s ease-in-out infinite; }
+.flowbar .bars i:nth-child(2) { animation-delay: .15s; } .flowbar .bars i:nth-child(3) { animation-delay: .3s; }
+.flowbar .bars i:nth-child(4) { animation-delay: .45s; } .flowbar .bars i:nth-child(5) { animation-delay: .6s; }
+@keyframes eq { 0%, 100% { transform: scaleY(.25); } 50% { transform: scaleY(1); } }
+.flowbar .said { flex: 1; min-height: 3.1em; font-size: 16px; line-height: 1.55; font-style: italic; display: flex; align-items: center; }
+.flowbar .said::after { content: ""; display: inline-block; width: 2px; height: 1.1em; margin-left: 3px; background: var(--ink); animation: caret 1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.flowbar.still .bars i { animation: none; transform: scaleY(.6); }
+.flowbar.still .said::after { display: none; }
+
+.squig { position: absolute; width: min(760px, 92vw); height: auto; aspect-ratio: 800 / 280; pointer-events: none; z-index: 0; }
+.squig path { fill: none; stroke: var(--lav); stroke-width: 18; stroke-linecap: round; }
+.squig.s1 { right: -90px; top: 24px; }
+.squig.s2 { width: min(480px, 56vw); left: -170px; top: 36%; transform: scaleX(-1) rotate(6deg); }
+
+.char { position: absolute; bottom: -4px; z-index: 1; width: clamp(150px, 16vw, 220px); aspect-ratio: 220 / 260; transform-origin: 50% 100%; }
+.char svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.char.c1 { left: clamp(8px, 7vw, 140px); transform: rotate(-4deg); }
+.char.c2 { right: clamp(8px, 7vw, 140px); transform: rotate(4deg); }
+@media (max-width: 900px) { .char { width: 104px; } .char.c1 { left: 8px; } .char.c2 { right: 8px; } }
+@media (max-width: 560px) { .char { width: 84px; } .squig { opacity: .8; } }
+
+/* character animation: a small, calm loop */
+.char-svg .bob { transform-origin: 110px 260px; animation: bob 3.8s ease-in-out infinite; }
+@keyframes bob { 0%, 100% { transform: rotate(-1.8deg) translateY(0); } 50% { transform: rotate(1.8deg) translateY(-5px); } }
+.char-svg .pup { animation: look 6s ease-in-out infinite; }
+@keyframes look { 0%, 100% { transform: translate(0, 0); } 22% { transform: translate(4px, -2px); } 50% { transform: translate(-4px, 1px); } 78% { transform: translate(2px, 3px); } }
+.char-svg .mouth { transform-box: fill-box; transform-origin: center; animation: talk 1.3s ease-in-out infinite; }
+@keyframes talk { 0%, 100% { transform: scaleY(.35); } 30% { transform: scaleY(1); } 62% { transform: scaleY(.55); } }
+.char-svg .voice rect { transform-box: fill-box; transform-origin: center bottom; animation: eq 1s ease-in-out infinite; }
+.char-svg .voice rect:nth-child(2) { animation-delay: .2s; } .char-svg .voice rect:nth-child(3) { animation-delay: .4s; }
+.char-svg .glint { animation: glint 4s ease-in-out infinite; }
+@keyframes glint { 0%, 85%, 100% { opacity: 1; } 92% { opacity: .2; } }
+
+/* ---------- numbers ---------- */
+.numbers { padding-top: clamp(56px, 7vw, 88px); padding-bottom: clamp(64px, 8vw, 104px); }
+.funnel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 760px) { .funnel { grid-template-columns: repeat(2, 1fr); } }
+.fstep { background: var(--card); border: 2px solid var(--ink); border-radius: 24px; padding: 18px 20px 20px; }
+.fstep:nth-child(2) { background: var(--lav); }
+.fstep:nth-child(3) { background: var(--orange-soft); }
+.fstep:nth-child(4) { background: var(--green-soft); }
+.fnum { font: 800 clamp(44px, 6.5vw, 72px)/1 var(--sans); letter-spacing: -0.04em; color: var(--green); font-variant-numeric: tabular-nums; }
+.flabel { margin-top: 8px; font-weight: 700; }
+.fsub { color: var(--muted); font-size: 14px; min-height: 1.4em; }
+.voice-line { margin: 32px 0 0; text-align: center; color: var(--muted); font-size: 16px; }
+.voice-line b { color: var(--ink); }
+.voice-line mark, .raw-block mark { background: var(--lav); color: var(--ink); padding: 1px 5px; border-radius: 6px; font-weight: 600; }
+
+/* ---------- bands ---------- */
+.band { padding: clamp(64px, 9vw, 112px) 0; }
+.band.taupe { background: var(--taupe); border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); }
+.block-head { margin: 0 0 40px; max-width: 62ch; }
+.block-head h2 { margin: 0 0 12px; font: 500 clamp(36px, 5.4vw, 60px)/1.02 var(--serif); letter-spacing: -0.02em; color: var(--green); }
+.block-head p { margin: 0; color: var(--ink); font-size: 18px; }
+
+.card { background: var(--card); border: 2px solid var(--ink); border-radius: 28px; }
+
+/* ---------- buttons, chips, pills ---------- */
+.btn { display: inline-block; text-decoration: none; border: 2px solid var(--green); background: var(--green); color: #fff; border-radius: 999px; padding: 11px 24px; font-weight: 700; font-size: 16px; cursor: pointer; }
+.btn:hover { filter: brightness(1.15); }
+.btn.ghost { background: transparent; color: var(--green); }
+.btn.ghost:hover { background: var(--green); color: #fff; filter: none; }
+.btn.accent { background: var(--lav); color: var(--ink); border-color: var(--ink); border-radius: 12px; }
+.btn.danger { background: transparent; color: var(--bad); border-color: var(--bad); }
+.btn.small { padding: 6px 16px; font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.chip { border: 1.5px solid var(--ink); background: transparent; border-radius: 999px; padding: 6px 16px; font-size: 15px; font-weight: 600; cursor: pointer; }
+.chip:hover { background: var(--card); }
+.chip[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
+.chip .n { opacity: .65; margin-left: 6px; font-variant-numeric: tabular-nums; }
+.pill { display: inline-block; border-radius: 999px; padding: 2px 12px; font-size: 14px; font-weight: 700; background: var(--taupe); border: 1.5px solid var(--ink); white-space: nowrap; }
+.pill[data-s="pitched"] { background: var(--lav); }
+.pill[data-s="replied"] { background: var(--orange-soft); }
+.pill[data-s="talking"] { background: var(--green-soft); }
+.pill[data-s="won"] { background: var(--green); color: #fff; border-color: var(--green); }
+.pill[data-s="passed"] { background: transparent; color: var(--muted); border-color: var(--line); }
+
+/* ---------- ledger ---------- */
+.ledger { overflow: hidden; }
+.lhead, .lrow { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.6fr) 64px minmax(0, 1.4fr) 76px 70px; gap: 14px; align-items: center; padding: 14px 24px; text-align: left; }
+.lhead { font-size: 14px; font-weight: 700; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+.lrow { width: 100%; background: none; border: 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+.lrow:last-child { border-bottom: 0; }
+.lrow:hover { background: var(--lav); }
+.lname { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lname small { display: block; font-weight: 400; color: var(--muted); font-size: 14px; }
+.lniche { color: var(--muted); font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sc { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--ink); font-weight: 800; font-size: 16px; background: var(--taupe); font-variant-numeric: tabular-nums; }
+.sc[data-t="hi"] { background: var(--green); color: #fff; border-color: var(--green); }
+.sc[data-t="mid"] { background: var(--lav); }
+.sc[data-t="low"] { background: var(--orange-soft); }
+.tick { font-weight: 700; color: var(--green); }
+.dash { color: var(--muted); }
+.empty { padding: 44px 24px; text-align: center; color: var(--muted); }
+.empty strong { display: block; margin-bottom: 6px; font: 500 28px var(--serif); color: var(--green); }
+@media (max-width: 820px) {
+  .lhead { display: none; }
+  .lrow { grid-template-columns: 1fr auto; row-gap: 6px; padding: 16px 18px; }
+  .lrow .lniche { grid-column: 1; }
+  .lrow .lscore { grid-row: 1; grid-column: 2; }
+  .lrow .lstat { grid-column: 1; }
+  .lrow .lpitched, .lrow .lreply { display: none; }
+}
+
+/* ---------- insights ---------- */
+.insights { margin-top: 64px; }
+.insights h3 { margin: 0 0 8px; font: 500 34px var(--serif); color: var(--green); }
+.insights .take { margin: 0 0 22px; max-width: 66ch; }
+.ins-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 820px) { .ins-grid { grid-template-columns: 1fr; } }
+.ins-grid > div { background: var(--card); border: 2px solid var(--ink); border-radius: 24px; padding: 18px 20px; }
+.ins-grid h4 { margin: 0 0 8px; font-size: 16px; }
+.ins-row { display: grid; grid-template-columns: minmax(0, 1.2fr) 1fr 38px; gap: 10px; align-items: center; font-size: 15px; padding: 5px 0; }
+.ins-row > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ins-row .bar { height: 10px; border-radius: 6px; background: var(--taupe); border: 1.5px solid var(--ink); overflow: hidden; }
+.ins-row .bar i { display: block; height: 100%; background: var(--lav-deep); }
+.ins-row .pv { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ---------- scorer ---------- */
+.scorer { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 24px; align-items: start; }
+@media (max-width: 900px) { .scorer { grid-template-columns: 1fr; } }
+.inputs { padding: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.inputs .wide { grid-column: 1 / -1; }
+.inputs h3 { grid-column: 1 / -1; margin: 10px 0 -4px; font: 500 26px var(--serif); color: var(--green); }
+.inputs h3:first-child { margin-top: 0; }
+label.f { display: grid; gap: 6px; font-size: 14px; font-weight: 700; }
+label.f .hint { font-weight: 400; color: var(--muted); }
+.in, select.in, textarea.in { width: 100%; padding: 10px 12px; border: 1.5px solid var(--ink); border-radius: 12px; background: #fff; font-weight: 400; font-size: 16px; }
+textarea.in { resize: vertical; min-height: 64px; line-height: 1.5; }
+.in:focus { outline: 3px solid var(--lav-deep); outline-offset: 1px; }
+.result { padding: 28px; position: sticky; top: 84px; }
+@media (max-width: 900px) { .result { position: static; } }
+.rtop { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+.ring { position: relative; width: 132px; height: 132px; flex: none; }
+.ring svg { transform: rotate(-90deg); }
+.ring .track { stroke: var(--taupe); }
+.ring .val { stroke: var(--green); transition: stroke-dashoffset .5s ease; }
+.ring b { position: absolute; inset: 0; display: grid; place-items: center; font: 800 42px var(--sans); letter-spacing: -0.03em; color: var(--green); }
+.tier { font: 500 34px/1.05 var(--serif); color: var(--green); }
+.tier-sub { margin-top: 4px; max-width: 32ch; }
+.risk { color: var(--bad); font-size: 14px; font-weight: 600; }
+.parts { margin: 24px 0 0; display: grid; gap: 12px; }
+.part { display: grid; grid-template-columns: 104px 1fr 32px; gap: 10px; align-items: center; font-size: 15px; font-weight: 600; }
+.part .bar { height: 10px; border-radius: 6px; background: var(--taupe); border: 1.5px solid var(--ink); overflow: hidden; }
+.part .bar i { display: block; height: 100%; background: var(--lav-deep); transition: width .4s ease; }
+.part .why { grid-column: 2 / -1; color: var(--muted); font-weight: 400; font-size: 14px; margin-top: -6px; }
+.part .pv { text-align: right; font-variant-numeric: tabular-nums; }
+.econ { margin-top: 24px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1.5px solid var(--ink); border-radius: 16px; overflow: hidden; background: #fff; }
+.econ div { padding: 12px 14px; }
+.econ div + div { border-left: 1.5px solid var(--ink); }
+.econ b { display: block; font: 800 20px var(--sans); font-variant-numeric: tabular-nums; color: var(--green); }
+.econ span { font-size: 13px; color: var(--muted); }
+@media (max-width: 560px) { .econ { grid-template-columns: repeat(2, 1fr); } .econ div:nth-child(3) { border-left: 0; } .econ div:nth-child(n+3) { border-top: 1.5px solid var(--ink); } }
+.pitch { margin-top: 24px; }
+.pitch-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-weight: 800; }
+.pitch textarea { min-height: 240px; }
+.warn { margin: 8px 0 0; color: var(--bad); font-size: 14px; font-weight: 600; }
+.note { color: var(--muted); font-size: 14px; margin: 12px 0 0; }
+.row-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.model { margin-top: 24px; }
+.model summary { padding: 18px 26px; font-weight: 700; cursor: pointer; }
+.model-body { padding: 4px 26px 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; }
+@media (max-width: 700px) { .model-body { grid-template-columns: 1fr; } }
+.model-body h4 { margin: 0 0 12px; font: 500 24px var(--serif); color: var(--green); }
+.slider { display: grid; grid-template-columns: 104px 1fr 34px; gap: 10px; align-items: center; font-size: 15px; margin-bottom: 8px; }
+.slider input { width: 100%; accent-color: var(--green); }
+.slider output { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.assume { display: grid; grid-template-columns: 1fr 100px; gap: 8px 12px; align-items: center; font-size: 15px; }
+
+/* ---------- voice log ---------- */
+.composer { padding: 26px; margin-bottom: 28px; display: grid; gap: 14px; }
+.composer h3 { margin: 0; font: 500 28px var(--serif); color: var(--green); }
+.composer .two { display: grid; grid-template-columns: 1fr 190px; gap: 14px; }
+@media (max-width: 600px) { .composer .two { grid-template-columns: 1fr; } }
+.composer textarea.raw { min-height: 140px; }
+.wc { color: var(--muted); font-size: 14px; }
+.day { margin-top: 48px; }
+.day:first-child { margin-top: 8px; }
+.day-label { margin: 0 0 14px; font: 500 28px/1.1 var(--serif); color: var(--green); }
+.day-label small { margin-left: 10px; font: 600 14px var(--sans); color: var(--muted); }
+.entries { display: grid; gap: 16px; }
+.entry { background: var(--card); border: 2px solid var(--ink); border-radius: 24px; padding: 22px 26px; }
+.entry h3 { margin: 10px 0 6px; font: 800 22px/1.2 var(--sans); letter-spacing: -0.02em; }
+.kind { font-size: 14px; font-weight: 700; padding: 2px 12px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--taupe); }
+.kind[data-k="decision"] { background: var(--lav); }
+.kind[data-k="mistake"] { background: var(--orange-soft); }
+.kind[data-k="pivot"] { background: var(--card); }
+.kind[data-k="learning"] { background: var(--green-soft); }
+.etime { color: var(--muted); font-size: 14px; margin-left: 8px; }
+.takeaway { margin: 0 0 12px; max-width: 64ch; }
+.entry details > summary { cursor: pointer; font-size: 15px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
+.entry .wcount { color: var(--muted); font-weight: 400; }
+.raw-block { margin: 0; max-width: 70ch; font: 400 17px/1.9 var(--sans); white-space: pre-wrap; word-break: break-word; font-style: italic; }
+.raw-block mark { font-weight: 500; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* ---------- about ---------- */
+.about { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px 56px; align-items: start; }
+@media (max-width: 800px) { .about { grid-template-columns: 1fr; } }
+.about p { margin: 0 0 16px; max-width: 60ch; font-size: 19px; }
+.about h3 { margin: 32px 0 14px; font: 500 30px var(--serif); color: var(--green); }
+.facts { margin: 0; padding: 8px 24px; background: var(--card); border: 2px solid var(--ink); border-radius: 28px; }
+.facts div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.facts div:last-child { border-bottom: 0; }
+.facts dt { color: var(--muted); font-size: 15px; }
+.facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.mistakes { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.mistakes li { background: var(--orange-soft); border: 2px solid var(--ink); border-radius: 20px; padding: 14px 18px; }
+.mistakes b { display: block; }
+.mistakes span { color: var(--muted); font-size: 16px; }
+.foot { padding: 40px 0 88px; color: var(--muted); font-size: 14px; text-align: center; }
+
+/* ---------- dialog, toast, edit bar ---------- */
+dialog { width: min(660px, calc(100vw - 24px)); max-height: calc(100vh - 32px); border: 2px solid var(--ink); border-radius: 28px; padding: 0; background: var(--card); color: var(--ink); }
+dialog::backdrop { background: rgba(27, 27, 24, .5); }
+.dlg { padding: 30px; display: grid; gap: 14px; }
+.dlg h3 { margin: 0; font: 500 38px/1.05 var(--serif); color: var(--green); }
+.dlg .meta { color: var(--muted); font-size: 15px; }
+.dlg h4 { margin: 8px 0 -6px; font-size: 15px; }
+.dlg blockquote { margin: 0; padding: 14px 16px; background: #fff; border: 1.5px solid var(--ink); border-radius: 16px; white-space: pre-wrap; font-size: 16px; }
+.dlg .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.toast { position: fixed; left: 50%; bottom: 76px; transform: translate(-50%, 20px); opacity: 0; pointer-events: none; background: var(--green); color: #fff; padding: 10px 20px; border-radius: 999px; font-weight: 600; transition: opacity .2s, transform .2s; z-index: 60; }
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+.editbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 10px var(--gutter); background: var(--lav); border-top: 2px solid var(--ink); font-size: 15px; }
+.editbar span { flex: 1; min-width: 200px; font-weight: 600; }
+
+
+/* ---------- day by day ---------- */
+.days { margin-top: 64px; }
+.days h3, .featured-title { margin: 0 0 20px; font: 500 34px var(--serif); color: var(--green); }
+.days-grid { display: grid; grid-template-columns: repeat(var(--n, 8), 1fr); gap: 12px; padding: 24px 24px 20px; background: var(--card); border: 2px solid var(--ink); border-radius: 28px; }
+.dcol { display: grid; gap: 8px; justify-items: center; text-align: center; }
+.dcol.future { opacity: .4; }
+.dbar { width: 100%; height: 84px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.dbar i { display: block; width: min(100%, 44px); border-radius: 10px 10px 4px 4px; border: 1.5px solid var(--ink); min-height: 0; }
+.dbar.m i { background: var(--lav-deep); }
+.dbar.w i { background: var(--green-soft); }
+.dbar i[style*="height:0%"] { border: 0; }
+.dl { font-size: 13px; font-weight: 700; line-height: 1.25; }
+.dl small { display: block; font-weight: 400; color: var(--muted); }
+.legend { margin: 16px 0 0; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; font-size: 14px; color: var(--muted); }
+.legend .k { display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px; border-radius: 4px; border: 1.5px solid var(--ink); }
+.legend .k.m { background: var(--lav-deep); } .legend .k.w { background: var(--green-soft); }
+@media (max-width: 640px) { .days-grid { padding: 18px 12px; gap: 6px; } .dl small { display: none; } }
+
+/* ---------- featured threads ---------- */
+#featured { margin-bottom: 56px; }
+.feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 860px) { .feat-grid { grid-template-columns: 1fr; } }
+.feat { background: var(--card); border: 2px solid var(--ink); border-radius: 28px; padding: 28px; display: grid; gap: 12px; align-content: start; }
+.feat.worked { background: var(--green-soft); }
+.feat.flopped { background: var(--orange-soft); }
+.feat h3 { margin: 4px 0 0; font: 500 34px/1.05 var(--serif); color: var(--green); }
+.feat h4 { margin: 8px 0 0; font-size: 14px; }
+.feat .fmeta { margin: 0; color: var(--muted); font-size: 15px; }
+.feat blockquote { margin: 0; padding: 14px 16px; background: #fff; border: 1.5px solid var(--ink); border-radius: 16px; white-space: pre-wrap; font-size: 15px; }
+.feat .clampi { display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; }
+.feat .pill, .plan-card .pill { justify-self: start; }
+.feat blockquote.silent { color: var(--muted); font-style: italic; }
+.feat .flesson { margin: 4px 0 8px; }
+.feat .btn { justify-self: start; }
+
+/* ---------- toolbar, board ---------- */
+.toolbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px 24px; flex-wrap: wrap; }
+.toolbar .chips { margin-bottom: 20px; }
+.tools { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; }
+.seg button { border: 0; background: transparent; padding: 6px 16px; font-weight: 600; font-size: 15px; cursor: pointer; }
+.seg button + button { border-left: 1.5px solid var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--green); color: #fff; }
+.sortby { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+.sortby select.in { width: auto; padding: 6px 10px; border-radius: 999px; font-size: 14px; }
+.board { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 16px; overflow-x: auto; padding-bottom: 12px; }
+.col { background: var(--card); border: 2px solid var(--ink); border-radius: 24px; padding: 16px; display: grid; gap: 10px; align-content: start; min-height: 160px; }
+.col h4 { margin: 0 0 4px; display: flex; justify-content: space-between; font-size: 15px; }
+.col h4 span { color: var(--muted); font-weight: 600; }
+.bcard { display: flex; align-items: center; gap: 12px; text-align: left; background: #fff; border: 1.5px solid var(--ink); border-radius: 16px; padding: 10px 12px; cursor: pointer; }
+.bcard:hover { background: var(--lav); }
+.bcard b { display: block; font-size: 15px; line-height: 1.25; }
+.bcard small { color: var(--muted); font-size: 13px; line-height: 1.25; display: block; }
+.bcard .sc { flex: none; width: 38px; height: 38px; font-size: 14px; }
+.col .none { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* ---------- presets, plan, dialog breakdown ---------- */
+.presets { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 24px; }
+.presets span { font-weight: 700; font-size: 15px; margin-right: 4px; }
+.plan { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 760px) { .plan { grid-template-columns: 1fr; } }
+.plan-card { background: var(--card); border: 2px solid var(--ink); border-radius: 28px; padding: 28px; display: grid; gap: 10px; align-content: start; }
+.plan-card:nth-child(1) { background: var(--lav); } .plan-card:nth-child(2) { background: var(--orange-soft); } .plan-card:nth-child(3) { background: var(--green-soft); }
+.plan-card h3 { margin: 6px 0 0; font: 500 30px/1.1 var(--serif); color: var(--green); }
+.plan-card p { margin: 0; }
+.mini { display: grid; gap: 8px; padding: 14px 16px; background: #fff; border: 1.5px solid var(--ink); border-radius: 16px; }
+.mini .part { grid-template-columns: 96px 1fr 30px; font-size: 14px; }
+.top nav a[aria-current="true"]:not(.pill-link) { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--lav-deep); }
+#mic.on { background: var(--coral); border-color: var(--ink); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+.char-inline { display: block; margin: 0 auto 16px; }
+.char-inline svg { display: block; width: 100%; height: auto; overflow: visible; }
+.about h3 + .built, .about h3 + .mistakes { margin-top: 0; }
+.built { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.built li { background: var(--card); border: 2px solid var(--ink); border-radius: 20px; padding: 14px 18px; display: grid; gap: 2px; }
+.built b { font-size: 17px; }
+.built span { color: var(--muted); font-size: 16px; }
+
+.checks { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.checks li { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.checks label { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.checks input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--green); flex: none; }
+.checks .mark { display: grid; place-items: center; width: 22px; height: 22px; flex: none; border: 2px solid var(--ink); border-radius: 6px; font-weight: 800; font-size: 14px; }
+.checks li.done .mark { background: var(--green); color: #fff; border-color: var(--green); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- proof sections ---------- */
+.sub { margin: 0 0 20px; font: 500 34px/1.1 var(--serif); color: var(--green); }
+#quotes:not(:empty), #mypost:not(:empty), #experiments:not(:empty), #brief:not(:empty), #casestudy:not(:empty) { margin-top: 64px; }
+#videos:not(:empty) { margin-bottom: 56px; }
+.hl + .sub { margin-top: 56px; }
+.todo { border: 2px dashed var(--ink); border-radius: 28px; padding: 24px 28px; }
+.todo b { display: block; margin-bottom: 8px; font-size: 18px; }
+.todo ul { margin: 0 0 12px; padding-left: 20px; }
+.todo li { margin-bottom: 4px; }
+.todo p { margin: 0; color: var(--muted); font-size: 14px; }
+.sample-note { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+.sample-note .pill { background: var(--lav); }
+
+.quotes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+@media (max-width: 760px) { .quotes-grid { grid-template-columns: 1fr; } }
+.quote { margin: 0; background: var(--card); border: 2px solid var(--ink); border-radius: 28px; padding: 28px; display: grid; gap: 14px; align-content: space-between; }
+.quote:nth-child(odd) { background: var(--lav); }
+.quote blockquote { margin: 0; font: 500 26px/1.3 var(--serif); }
+.quote figcaption { font-size: 14px; font-weight: 600; color: var(--muted); }
+
+.post { padding: 28px; display: grid; gap: 16px; justify-items: start; }
+.post-text { margin: 0; max-width: 62ch; font-size: 18px; white-space: pre-wrap; }
+.post-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.post-stats b { display: block; font: 800 36px/1 var(--sans); color: var(--green); letter-spacing: -0.03em; }
+.post-stats span { color: var(--muted); font-size: 14px; }
+
+.vids { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 8px; }
+@media (max-width: 760px) { .vids { grid-template-columns: 1fr; } }
+.vid { margin: 0; background: var(--card); border: 2px solid var(--ink); border-radius: 24px; overflow: hidden; }
+.vid video, .vid iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; background: #000; }
+.vid figcaption { padding: 14px 18px; display: grid; gap: 2px; }
+.vid figcaption span { color: var(--muted); font-size: 14px; }
+#videos { margin-bottom: 8px; }
+#videos + #composer, #composer:empty { margin-top: 0; }
+
+.hl-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+@media (max-width: 640px) { .hl-stats { grid-template-columns: 1fr; } }
+.hl-stats .fstep:nth-child(1) { background: var(--card); }
+.hl-stats .fstep:nth-child(2) { background: var(--green-soft); }
+.hl-stats .fstep:nth-child(3) { background: var(--orange-soft); }
+.hl { overflow: hidden; }
+.hl-head, .hl-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 130px; gap: 20px; align-items: center; padding: 14px 24px; }
+.hl-head { font-size: 14px; font-weight: 700; color: var(--muted); border-bottom: 1.5px solid var(--ink); }
+.hl-row { border-bottom: 1px solid var(--line); }
+.hl-row:last-child { border-bottom: 0; }
+.hl-row small { display: block; color: var(--muted); font-size: 13px; }
+.hl-row .said-t { font-style: italic; }
+@media (max-width: 720px) { .hl-head { display: none; } .hl-row { grid-template-columns: 1fr; gap: 6px; padding: 16px 20px; } }
+.takes { margin: 0; padding-left: 22px; max-width: 70ch; display: grid; gap: 10px; font-size: 18px; }
+
+.exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 980px) { .exp-grid { grid-template-columns: 1fr; } }
+.exp { background: var(--card); border: 2px solid var(--ink); border-radius: 28px; padding: 26px; display: grid; gap: 10px; align-content: start; }
+.exp .pill { justify-self: start; background: var(--lav); }
+.exp h4 { margin: 4px 0 2px; font: 500 28px/1.1 var(--serif); color: var(--green); }
+.exp p { margin: 0; font-size: 16px; }
+
+.brief { padding: 30px; }
+.brief h4 { margin: 0 0 8px; font: 500 32px/1.1 var(--serif); color: var(--green); }
+.brief .angle { margin: 0 0 24px; max-width: 62ch; font-size: 19px; }
+.brief-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 40px; }
+@media (max-width: 760px) { .brief-cols { grid-template-columns: 1fr; } }
+.brief h5 { margin: 0 0 8px; font-size: 15px; }
+.brief ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+.case-intro { max-width: 62ch; margin: -4px 0 24px; font-size: 18px; }
+.case-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+@media (max-width: 640px) { .case-stats { grid-template-columns: 1fr; } }
+.case-stats .fstep:nth-child(1) { background: var(--lav); }
+.case-stats .fstep:nth-child(2) { background: var(--orange-soft); }
+.case-stats .fstep:nth-child(3) { background: var(--green-soft); }
+.qa { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 760px) { .qa { grid-template-columns: 1fr; } }
+.qa-card { background: var(--card); border: 2px solid var(--ink); border-radius: 24px; padding: 22px 26px; }
+.qa-card h4 { margin: 0 0 6px; font-size: 17px; }
+.qa-card p { margin: 0; }
+
+.ctx { margin: 0 0 8px; padding: 0; list-style: none; display: grid; gap: 12px; max-width: 76ch; }
+.ctx li { padding-left: 18px; border-left: 4px solid var(--lav-deep); font-size: 17px; }
+.ctx a, .ctx em { display: inline-block; margin-left: 4px; font-size: 14px; font-weight: 600; color: var(--green); }
+.sub-gap { margin-top: 56px; }
+
+.case-todo { margin-top: 16px; }
+
+/* ---------- edit-mode tools ---------- */
+.today { padding: 28px; margin-bottom: 40px; background: var(--lav); }
+.today .sub { margin-bottom: 16px; }
+.today-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+@media (max-width: 760px) { .today-stats { grid-template-columns: repeat(2, 1fr); } }
+.today-stats div { background: var(--card); border: 1.5px solid var(--ink); border-radius: 18px; padding: 14px 16px; }
+.today-stats b { display: block; font: 800 30px/1 var(--sans); color: var(--green); letter-spacing: -0.03em; }
+.today-stats span { font-size: 13px; color: var(--muted); }
+.due { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 8px; }
+.due li { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--card); border: 1.5px solid var(--ink); border-radius: 16px; padding: 10px 16px; }
+.runner { margin-bottom: 24px; }
+.runner summary { padding: 18px 26px; font-weight: 700; cursor: pointer; }
+.runner-body { padding: 0 26px 26px; }
+.rn-list { display: grid; gap: 10px; margin: 16px 0; }
+.rn-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) 150px; gap: 12px; align-items: center; }
+.rn-row.custom .hl-said { grid-column: 1; }
+.rn-said { font-style: italic; }
+.rn-res small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+@media (max-width: 760px) { .rn-row { grid-template-columns: 1fr; gap: 6px; padding-bottom: 10px; border-bottom: 1px solid var(--line); } }
+#script-text { font-size: 15px; line-height: 1.6; }
+
+</style>
+</head>
+<body>
+
+<a class="skip" href="#sprint">Skip to the results</a>
+
+<div id="demo-banner" class="banner" hidden>Prototype with sample data. Every creator, number and log entry on this page is invented.</div>
+
+<header class="top">
+  <a class="brand" href="#top" id="brand"></a>
+  <nav aria-label="Sections">
+    <a href="#sprint">Who I contacted</a>
+    <a href="#scorer">How I chose</a>
+    <a href="#log">Voice log</a>
+    <a href="#hinglish" id="hinglish-link">Hinglish test</a>
+    <a href="#plan" id="plan-link">My plan</a>
+    <a class="pill-link" href="#about">About me</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <svg class="squig s1" viewBox="-40 -40 800 280" aria-hidden="true"><path d="M0 150 C110 40 250 30 300 105 C340 170 250 195 240 130 C232 70 330 30 450 75 C560 115 640 70 720 20"/></svg>
+    <svg class="squig s2" viewBox="-40 -40 800 280" aria-hidden="true"><path d="M0 150 C110 40 250 30 300 105 C340 170 250 195 240 130 C232 70 330 30 450 75 C560 115 640 70 720 20"/></svg>
+    <div class="char c1" data-shirt="#ffa64a" data-hair="#1b1b18" data-lens="#03493f" aria-hidden="true"></div>
+    <div class="char c2" data-shirt="#ff6b4f" data-hair="#ffa64a" data-lens="#edd6ff" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <p class="dayline" id="dayline"></p>
+      <h1 id="h1"></h1>
+      <p class="lede" id="lede"></p>
+      <div class="flowbar" id="flowbar" hidden aria-hidden="true">
+        <span class="bars"><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="said" id="said"></span>
+      </div>
+      <div class="hero-btns">
+        <a class="btn" href="#sprint">See the results</a>
+        <a class="btn ghost" href="#log">Hear it in my words</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap numbers" aria-label="Outreach results so far">
+    <div class="funnel" id="funnel"></div>
+    <p class="voice-line" id="voiceline"></p>
+    <div class="days" id="days"></div>
+  </section>
+
+  <section id="sprint" class="band taupe" aria-labelledby="sprint-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="sprint-h">Who I contacted</h2>
+        <p>Real creators, what I sent, what came back, and what I learned. Tap a name to read the whole thing.</p>
+      </div>
+      <div id="today"></div>
+      <div id="featured"></div>
+      <div class="toolbar">
+        <div class="chips" id="status-chips" role="group" aria-label="Filter by status"></div>
+        <div class="tools" id="sprint-tools"></div>
+      </div>
+      <div class="ledger card" id="ledger"></div>
+      <div class="board" id="board" hidden></div>
+      <div class="insights" id="insights"></div>
+      <div id="quotes"></div>
+      <div id="mypost"></div>
+    </div>
+  </section>
+
+  <section id="scorer" class="band" aria-labelledby="scorer-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="scorer-h">How I chose who to pitch</h2>
+        <p>I got tired of guessing, so I built a small tool. Put in a creator's public numbers and it tells you whether they're worth a message, and writes a first draft. Every weight is mine, and you can change them.</p>
+      </div>
+      <div class="presets" id="presets"></div>
+      <div class="scorer">
+        <form class="card inputs" id="scorer-form" autocomplete="off"></form>
+        <div class="card result" id="scorer-result" aria-live="polite"></div>
+      </div>
+      <details class="model card" id="model">
+        <summary>See the weights and assumptions</summary>
+        <div class="model-body" id="model-body"></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="log" class="band taupe" aria-labelledby="log-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="log-h">My voice log</h2>
+        <p>I talk through decisions and mistakes as they happen and save them as they come out. The purple parts are the raw dictation, fillers and all.</p>
+      </div>
+      <div id="videos"></div>
+      <div id="composer"></div>
+      <div class="chips" id="kind-chips" role="group" aria-label="Filter log by type"></div>
+      <div id="timeline"></div>
+    </div>
+  </section>
+
+  <section id="hinglish" class="band" aria-labelledby="hinglish-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="hinglish-h">I tested Wispr Flow in Hinglish</h2>
+        <p>Most people I know switch between Hindi and English mid-sentence. So I checked how it handles that, using phrases I actually say.</p>
+      </div>
+      <div id="hinglish-body"></div>
+    </div>
+  </section>
+
+  <section id="plan" class="band taupe" aria-labelledby="plan-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="plan-h">What I'd do next</h2>
+        <p>Everything above, turned into a plan for the India growth team.</p>
+      </div>
+      <h3 class="sub">My first month</h3>
+      <div class="plan" id="plan-body"></div>
+      <div id="experiments"></div>
+      <div id="brief"></div>
+    </div>
+  </section>
+
+  <section id="about" class="band" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="block-head">
+        <h2 id="about-h">About me</h2>
+      </div>
+      <div class="about" id="about-body"></div>
+      <div id="casestudy"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap" id="foot"></div></footer>
+
+<dialog id="dlg"></dialog>
+<div class="editbar" id="editbar" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+// PROTOTYPE DATA. The creators, numbers, messages, replies, log entries and Hinglish results below are
+// invented so the site can be previewed. They are NOT real results and must not be submitted as such.
+// Replace this file with the output of "Export data.js" (open the site with ?edit) and set
+// profile.prototype to false to remove the banner.
+(() => {
+  // Dates are generated relative to today so the prototype always looks mid-sprint (day 7 of 8).
+  const base = new Date(); base.setHours(0, 0, 0, 0); base.setDate(base.getDate() - 6);
+  const at = (day, h, m = 0) => { const d = new Date(base); d.setDate(d.getDate() + day); d.setHours(h, m, 0, 0); return d.toISOString(); };
+  const ymd = day => { const d = new Date(base); d.setDate(d.getDate() + day); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+  const disclose = "To be upfront: I'm not on the Wispr Flow team. I've applied to their India growth team, and this outreach is part of my application. I'm only pitching creators I think are a real fit.";
+
+  window.SITE_DATA = {
+    profile: {
+      prototype: true,
+      name: "Mrinall Samal",
+      headline: "",
+      lede: "Hi, I'm Mrinall, a CS student from Bhubaneswar who builds software people actually use. For a week I've been pitching real creators on Wispr Flow, keeping score of what works, and talking my decisions out loud as I go. It's all below, including what went wrong.",
+      city: "Bhubaneswar, Odisha",
+      startDate: "Immediately",
+      relocation: "Yes, I can relocate to Bangalore",
+      interest: "Internship",
+      website: "mrinall.dev",
+      linkedin: "linkedin.com/in/mrinall-samal-34004233b",
+      github: "github.com/MrinallSamal-byte",
+      x: "",
+      email: "samalmrinall9@gmail.com",
+      about: [
+        "I'm a B.Tech CSE student at Siksha 'O' Anusandhan University in Bhubaneswar (2024 to 2028). I build full-stack and AI systems that real people use, and I like measuring whether they work.",
+        "I maintain iters.live on my own, a campus platform for about 12,000 students that takes around 100K API requests a day, and I built WriteOnce, a scheduler that posts across five social networks. Both taught me the same thing: getting something in front of people is half the job.",
+        "I'm applying to the growth team because I want to treat creator marketing the way I treat software. Find who is worth reaching, write down why, send it, measure the replies, and keep what works."
+      ],
+      built: [
+        { name: "iters.live", line: "Campus platform for about 12,000 students. Solo-maintained, around 100K daily API hits." },
+        { name: "WriteOnce", line: "Social media scheduler for five networks, with retries and approval links." },
+        { name: "Sanket", line: "Anti-scam tool for WhatsApp and web with multilingual verdicts." },
+        { name: "CodeMentor AI", line: "Agentic coding tutor with an in-browser code runner and 17 algorithm visualizers." },
+        { name: "Smart India Hackathon 2026", line: "Top 50 nationally." }
+      ],
+      mistakes: [],
+      post: null,
+      videos: [],
+      casestudy: {
+        title: "How iters.live reached a campus",
+        intro: "The only growth I've done so far is for something I built myself. These numbers are from my own platform.",
+        stats: [
+          { n: "12,000", label: "students on the platform" },
+          { n: "~100K", label: "API requests a day" },
+          { n: "1", label: "person maintaining it" }
+        ],
+        story: [
+          { q: "How did the first students find it?", a: "Through college and club announcements." }
+        ]
+      },
+      hinglish: {
+        runs: [
+          { said: "Kal ki meeting ko reschedule kar dena", wrote: "Kal ki meeting ko reschedule kar dena", ok: true },
+          { said: "Client ko ek follow up email bhej do", wrote: "Client ko ek follow-up email bhej do", ok: true },
+          { said: "Send me the PR description by evening", wrote: "Send me the PR description by evening", ok: true },
+          { said: "Aaj ka standup skip karte hain", wrote: "Aaj ka stand-up skip karte hain", ok: true },
+          { said: "Mera Next.js build fail ho gaya", wrote: "Mera next JS build fail ho gaya", ok: false, note: "Tech names get split up" },
+          { said: "Iska API response kaafi slow hai", wrote: "Iska API response kaafi slow hai", ok: true },
+          { said: "Bhubaneswar mein kal baarish hogi", wrote: "Bhubaneshwar mein kal baarish hogi", ok: false, note: "City spelled differently from how I write it" },
+          { said: "Ye invoice kal tak clear kar dena", wrote: "Ye invoice kal tak clear kar dena", ok: true },
+          { said: "Pehle login flow test karo phir deploy", wrote: "Pehle login flow test karo fir deploy", ok: false, note: "Spelling variant, meaning intact" },
+          { said: "Please sync with Rohan about the Hinglish pitch", wrote: "Please sync with Rohan about the Hinglish pitch", ok: true },
+          { said: "Iss quarter ka OKR doc share kar do", wrote: "Iss quarter ka OKR dock share kar do", ok: false, note: "\"doc\" heard as \"dock\"" },
+          { said: "Mujhe Postgres ka index samajh nahi aaya", wrote: "Mujhe postgres ka index samajh nahi aaya", ok: true, note: "Capital letter only" },
+          { said: "Aap kal tak review kar sakte ho kya", wrote: "Aap kal tak review kar sakte ho kya", ok: true },
+          { said: "Deploy hone ke baad Slack pe ping kar dena", wrote: "Deploy hone ke baad Slack pe ping kar dena", ok: true },
+          { said: "Ye PR merge karne se pehle tests chala lo", wrote: "Ye PR merge karne se pehle tests chala lo", ok: true },
+          { said: "Sunday ko family function hai, Monday se start karte hain", wrote: "Sunday ko family function hai, Monday se start karte hain", ok: true },
+          { said: "Wispr Flow se email likhna kaafi fast hai", wrote: "Whisper Flow se email likhna kaafi fast hai", ok: false, note: "The product's own name came out as \"Whisper\"" },
+          { said: "Budget ka sheet Priya ko forward kar do", wrote: "Budget ka sheet Priya ko forward kar do", ok: true },
+          { said: "Ye feature Q4 mein ship karenge", wrote: "Ye feature Q4 mein ship karenge", ok: true },
+          { said: "Mere ko thoda time chahiye, kal reply karta hoon", wrote: "Mere ko thoda time chahiye, kal reply karta hoon", ok: true }
+        ],
+        takeaways: [
+          "Everyday Hinglish came out well. The sentence structure and the language mixing weren't the problem.",
+          "Tech names, place names and the product's own name were where it slipped. I'd show those honestly in any demo instead of only showing the easy sentences.",
+          "Some misses are spelling choices for Hindi words in Roman letters (phir or fir), which varies from person to person and isn't really an accuracy problem."
+        ]
+      },
+      context: [
+        { text: "India is Wispr Flow's big expansion bet, starting with Hinglish, with other Indian languages planned.", source: "TechCrunch, May 2026", url: "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/" },
+        { text: "India-specific pricing was reported at ₹320 a month on annual plans, against about $12 a month globally.", source: "Press coverage of the India launch", url: "https://techcrunch.com/2026/05/09/voice-ai-in-india-is-hard-wispr-flow-is-betting-on-it-anyway/" },
+        { text: "One report says India is about 14% of installs but about 2% of revenue. That's a single secondary source, so I'd confirm it, but it's why my experiments measure paying users and not just installs.", source: "Ecosistema Startup (unverified)", url: "https://ecosistemastartup.com/?p=80323" }
+      ],
+      plan: [
+        { when: "Week 1", title: "Swap my assumptions for Wispr's real numbers", body: "Put Wispr Flow's real click, signup and paid rates into the scorer so creators are ranked by cost per paying user, not by follower count." },
+        { when: "Weeks 2 to 3", title: "Build a bench of 40 creators", body: "Ten each in coding, students, founders and writing. Pitch Hinglish creators in Hinglish. Start with mid-size creators, who were easiest to reach in my sprint." },
+        { when: "Week 4", title: "Ship one proof-of-use campaign", body: "Ask five creators to use Flow for a week and share an honest before and after. Track installs, activations and what they say without being asked." },
+        { when: "Month 2", title: "Automate what I did by hand", body: "Turn the spreadsheet work into a small internal tool for scoring, outreach tracking and follow-up reminders, so the team's time goes into conversations with creators." }
+      ],
+      experiments: [
+        { effort: "1 week, no budget", title: "Pitch Hinglish creators in Hinglish", hypothesis: "Creators with a Hinglish audience reply more, and sooner, when the first message sounds like them.", how: "Send the same offer to 10 creators in English and 10 in Hinglish, matched by size and niche.", metric: "Reply rate and hours to first reply for each group." },
+        { effort: "3 weeks, small budget", title: "Free trial before any paid deal", hypothesis: "Creators who use Flow for a week make more honest, better-performing content than ones paid cold, and more of their audience converts to paid.", how: "Offer a week of use to 15 mid-size creators, then offer paid slots only to those who keep using it.", metric: "Share still using it after 7 days, and cost per paying user for this group against cold paid deals." },
+        { effort: "2 weeks, my own time", title: "One short clip per profession", hypothesis: "A 30-second clip of a student, a developer or a lawyer doing a real task converts better than a general demo.", how: "Make three clips, give each to creators in the matching niche, and use a separate tracked link for each.", metric: "Clicks, signups and paid conversions per clip." }
+      ],
+      brief: {
+        title: "Creator brief: Wispr Flow for your audience",
+        angle: "Show one real task you do every day, done by speaking instead of typing, with a clear before and after.",
+        deliverables: ["One 30 to 60 second video or reel", "One story or post with a tracked link", "A follow-up after 7 days with an honest verdict"],
+        hooks: ["Write a full email in 20 seconds", "Answer 10 messages without touching the keyboard", "Take notes in Hindi, English or both, just by talking"],
+        measure: ["Clicks on the tracked link", "Installs, activations and paid conversions", "Comments that mention a specific use"],
+        avoid: ["Scripted praise", "Claims about accuracy you haven't tested yourself", "Hiding that it's a partnership"]
+      }
+    },
+    sprint: { start: ymd(0), end: ymd(7), target: 20 },
+    creators: [
+      { id: "c01", name: "Chai & Code", handle: "@chaiandcode", platform: "YouTube", niche: "Coding / dev", language: "Hinglish", contentType: "Tutorials / workflows", followers: 142000, avgViews: 31000, comments: 118, price: 7000, risk: 0, status: "won", pitchedOn: ymd(1),
+        message: `Hi,\n\nYour video on setting up a Next.js project had a minute where you stop to write the commit message and PR description by hand. That's the exact moment I'd use dictation.\n\nDevelopers spend a surprising share of the day writing things that aren't code: PR descriptions, Slack threads, docs, and prompts to AI tools.\n\n${disclose}\n\nWould you try it for a week and tell me honestly what you think, including if it isn't for you?\n\nMrinall Samal`,
+        reply: "bro i actually type a lot of commit msgs and docs so will try it for a week. if it works i'll make a short on it. no payment needed for the trial",
+        lesson: "A specific moment from one video, and a small ask, got a yes within a day. He said the trial was enough and didn't ask for money." },
+      { id: "c02", name: "Notes Wali Didi", handle: "@noteswalididi", platform: "Instagram", niche: "Students / exam prep (UPSC, CAT, JEE…)", language: "Hinglish", contentType: "Talking-head commentary", followers: 268000, avgViews: 61000, comments: 240, price: 22000, risk: 0, status: "talking", pitchedOn: ymd(1),
+        message: `Hi Didi!\n\nAapki reel jisme aap bolti hain ki "pehle bolo, phir likho" mujhe bahut pasand aayi. Wahi idea dictation ka hai.\n\nNotes, answer-writing practice aur lambe messages bolkar kaafi tez ho jaate hain.\n\nSeedhi baat: abhi main Wispr Flow team ka hissa nahi hoon. Maine unki India growth team ke liye apply kiya hai, aur ye outreach meri application ka hissa hai.\n\nKya aapka media kit ya rate card mil sakta hai?\n\n- Mrinall Samal`,
+        reply: "hi! i handle collabs for her. can you send a 45 sec demo with hindi notes first? then we can talk rates",
+        lesson: "Replied the same evening, but from her manager. Anyone with a manager wants a demo before they discuss money." },
+      { id: "c03", name: "The Odia Dev", handle: "@theodiadev", platform: "YouTube", niche: "Coding / dev", language: "Bengali / Marathi / other", contentType: "Tutorials / workflows", followers: 38000, avgViews: 9000, comments: 64, price: 2000, risk: 0, status: "talking", pitchedOn: ymd(2),
+        message: `Hi,\n\nI'm also from Odisha. Your video on building a REST API in Odia was the first one I've seen that explains it in the language people actually think in.\n\nTyping in Odia or in a mix of Odia and English is slow on most keyboards, and speaking isn't.\n\n${disclose}\n\nWould you be open to a 10-minute chat this week?\n\nMrinall Samal`,
+        reply: "yes sure, call tomorrow evening?",
+        lesson: "A shared home state helped, but the real hook was a video in his language. I have no idea yet whether Flow handles Odia well, so I need to test that before the call." },
+      { id: "c04", name: "Startup Sutra", handle: "@startupsutra", platform: "LinkedIn", niche: "Startups / founders", language: "English", contentType: "Talking-head commentary", followers: 71000, avgViews: 11000, comments: 48, price: 8000, risk: -20, status: "replied", pitchedOn: ymd(2),
+        message: `Hi,\n\nYour post about founders spending three hours a day in email stayed with me.\n\nFounders live in email, Slack and investor updates, which is a lot of typing that doesn't need to be typed.\n\n${disclose}\n\nCan I send you a 60-second demo tailored to your audience?\n\nMrinall Samal`,
+        reply: "Interesting, thanks. We're tied up with another dictation tool till March but happy to look again after.",
+        lesson: "I didn't check for a competing partnership first. The scorer now has a penalty for that, and I'll check before writing the message, not after." },
+      { id: "c05", name: "Placement Pathshala", handle: "@placementpathshala", platform: "YouTube", niche: "Students / exam prep (UPSC, CAT, JEE…)", language: "Hinglish", contentType: "Tutorials / workflows", followers: 520000, avgViews: 74000, comments: 310, price: 60000, risk: 0, status: "passed", pitchedOn: ymd(1),
+        message: `Hi,\n\nYour mock interview series is the best I've found for placement prep.\n\nNotes, answer practice and long messages all go faster when you can talk them out first.\n\n${disclose}\n\nWould you be open to a 10-minute chat this week?\n\nMrinall Samal`,
+        reply: "not for us right now, thanks",
+        lesson: "A polite no from the biggest channel I tried. I started with the largest names on day one, and the mid-size ones were easier to reach." },
+      { id: "c06", name: "Excel Guru Ravi", handle: "@excelgururavi", platform: "YouTube", niche: "Productivity / workflow", language: "Hinglish", contentType: "Tutorials / workflows", followers: 205000, avgViews: 22000, comments: 85, price: 12000, risk: 0, status: "passed", pitchedOn: ymd(2),
+        message: `Hi Ravi,\n\nAapka pivot table wala video kaafi clear tha. Aap already dikhate hain ki din ka friction kaise kam karein.\n\nKya is hafte 10 minute ki quick baat ho sakti hai?\n\n- Mrinall Samal`,
+        reply: "", lesson: "No reply after one follow-up. I asked for a call in the very first line, which is a big ask from a stranger." },
+      { id: "c07", name: "Law Notes by Kavya", handle: "@lawnoteskavya", platform: "Instagram", niche: "Law / CA / professional services", language: "English", contentType: "Talking-head commentary", followers: 58000, avgViews: 8000, comments: 33, price: 4000, risk: 0, status: "passed", pitchedOn: ymd(3),
+        message: `Hi,\n\nLong client emails and notices are exactly where speaking beats typing.\n\nCan I send you a 60-second demo tailored to your audience?\n\nMrinall Samal`,
+        reply: "", lesson: "My message had no reference to any of her content, and it shows. That one is on me." },
+      { id: "c08", name: "Bangalore Founder Diaries", handle: "@blrfounderdiaries", platform: "LinkedIn", niche: "Startups / founders", language: "English", contentType: "Talking-head commentary", followers: 46000, avgViews: 7000, comments: 29, price: 5000, risk: 0, status: "passed", pitchedOn: ymd(3),
+        message: `Hi,\n\nFounders type a lot of things that don't need to be typed.\n\n${disclose}\n\nWould you try it for a week and tell me honestly what you think?\n\nMrinall Samal`,
+        reply: "", lesson: "Another message with no specific hook. Two for two on the generic ones getting ignored." },
+      { id: "c09", name: "Sneaker Sahil", handle: "@sneakersahil", platform: "Instagram", niche: "Lifestyle / vlog", language: "Hinglish", contentType: "Vlog / lifestyle", followers: 380000, avgViews: 52000, comments: 190, price: 30000, risk: 0, status: "passed", pitchedOn: ymd(2),
+        message: `Hi Sahil!\n\nHonestly the fit is thinner for your niche, so I'd keep any collaboration small and specific.\n\nKya aap ek hafta try karke honestly bata sakte hain?\n\n- Mrinall Samal`,
+        reply: "", lesson: "It scored low before I sent it. I pitched anyway to hit a number, and it used up a slot." },
+      { id: "c10", name: "Prompt Pandit", handle: "@promptpandit", platform: "X", niche: "Productivity / workflow", language: "English", contentType: "Tutorials / workflows", followers: 52000, avgViews: 7500, comments: 41, price: 3000, risk: 0, status: "pitched", pitchedOn: ymd(3),
+        message: `Hi,\n\nYour thread on writing better prompts mentioned that the hard part is explaining what you want. Speaking it is usually faster than typing it.\n\n${disclose}\n\nWould you try it for a week and tell me honestly what you think?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c11", name: "Marathi Code Mitra", handle: "@marathicodemitra", platform: "YouTube", niche: "Coding / dev", language: "Bengali / Marathi / other", contentType: "Tutorials / workflows", followers: 33000, avgViews: 6000, comments: 52, price: 1500, risk: 0, status: "pitched", pitchedOn: ymd(3),
+        message: `Hi,\n\nYour Java series in Marathi is rare and useful. Developers who think in a regional language usually type in a mix of two.\n\n${disclose}\n\nCan I send you a 60-second demo tailored to your audience?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c12", name: "Pitch Deck Priya", handle: "@pitchdeckpriya", platform: "LinkedIn", niche: "Startups / founders", language: "English", contentType: "Tool reviews", followers: 29000, avgViews: 5000, comments: 20, price: 3500, risk: 0, status: "pitched", pitchedOn: ymd(5),
+        message: `Hi Priya,\n\nYour comparison of three pitch-deck tools was clear and fair, which is rare.\n\n${disclose}\n\nWould you try it for a week and tell me honestly what you think?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c13", name: "StudySprint India", handle: "@studysprintindia", platform: "Instagram", niche: "Students / exam prep (UPSC, CAT, JEE…)", language: "Hinglish", contentType: "Talking-head commentary", followers: 175000, avgViews: 38000, comments: 150, price: 14000, risk: 0, status: "pitched", pitchedOn: ymd(5),
+        message: `Hi!\n\nAapki "30 din mein notes ka system" wali reel mein aap bolte hain ki likhna sabse slow hissa hai. Wahin dictation madad kar sakta hai.\n\nKya is hafte 10 minute ki quick baat ho sakti hai?\n\n- Mrinall Samal`, reply: "", lesson: "" },
+      { id: "c14", name: "Tamil Tech Talk", handle: "@tamiltechtalk", platform: "YouTube", niche: "Tech reviews / gadgets", language: "Tamil / Telugu / Kannada / Malayalam", contentType: "Tool reviews", followers: 88000, avgViews: 14000, comments: 70, price: 4500, risk: 0, status: "pitched", pitchedOn: ymd(5),
+        message: `Hi,\n\nYour keyboard comparison video had a section on typing speed in Tamil. Dictation makes a good before-and-after for exactly that.\n\n${disclose}\n\nCan I send you a 60-second demo tailored to your audience?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c15", name: "Notion with Nikhil", handle: "@notionwithnikhil", platform: "YouTube", niche: "Productivity / workflow", language: "English", contentType: "Tutorials / workflows", followers: 96000, avgViews: 15000, comments: 88, price: 6000, risk: -6, status: "pitched", pitchedOn: ymd(6),
+        message: `Hi Nikhil,\n\nYour "second brain in an afternoon" video is the reason I finally set mine up. Capturing notes by voice fits straight into that.\n\n${disclose}\n\nWould you be open to a 10-minute chat this week?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c16", name: "Hinglish Hacker", handle: "@hinglishhacker", platform: "YouTube", niche: "Coding / dev", language: "Hinglish", contentType: "Tutorials / workflows", followers: 61000, avgViews: 12000, comments: 77, price: 3500, risk: 0, status: "pitched", pitchedOn: ymd(6),
+        message: `Hi,\n\nAapka Docker wala video bahut clear tha. Aap bolte hain ki "sab kuch type karna padta hai", aur wahin dictation kaam aata hai.\n\nKya aap ek hafta try karke honestly bata sakte hain?\n\n- Mrinall Samal`, reply: "", lesson: "" },
+      { id: "c17", name: "Newsletter Nisha", handle: "@newsletternisha", platform: "X", niche: "Writing / journalism / newsletters", language: "English", contentType: "Talking-head commentary", followers: 24000, avgViews: 3200, comments: 15, price: 0, risk: 0, status: "pitched", pitchedOn: ymd(6),
+        message: `Hi Nisha,\n\nYour last issue said first drafts are the hardest part. Getting a draft out at speaking speed and then editing it is a different way to write.\n\n${disclose}\n\nWould you try it for a week and tell me honestly what you think?\n\nMrinall Samal`, reply: "", lesson: "" },
+      { id: "c18", name: "UPSC Daily Writer", handle: "@upscdailywriter", platform: "Instagram", niche: "Students / exam prep (UPSC, CAT, JEE…)", language: "Hindi", contentType: "Talking-head commentary", followers: 140000, avgViews: 33000, comments: 170, price: 9000, risk: 0, status: "identified", pitchedOn: "", message: "", reply: "", lesson: "Waiting until I've tested Hindi accuracy myself." },
+      { id: "c19", name: "Finance with Faiz", handle: "@financewithfaiz", platform: "Instagram", niche: "Personal finance / investing", language: "Hinglish", contentType: "Talking-head commentary", followers: 230000, avgViews: 41000, comments: 130, price: 15000, risk: 0, status: "identified", pitchedOn: "", message: "", reply: "", lesson: "" },
+      { id: "c20", name: "GigGuru Anand", handle: "@gigguruanand", platform: "YouTube", niche: "Tech reviews / gadgets", language: "English", contentType: "Tool reviews", followers: 310000, avgViews: 36000, comments: 140, price: 25000, risk: -6, status: "identified", pitchedOn: "", message: "", reply: "", lesson: "" }
+    ],
+    log: [
+      { id: "l01", ts: at(0, 20, 30), kind: "decision", title: "Why I'm doing outreach and not building a game",
+        takeaway: "A portfolio that does the job beats one that describes it.",
+        raw: "Okay so I've read the whole brief, and, um, I already know what most people are going to build. A game, or a chatbot version of themselves. And I just think that's not what the job is. The job is picking creators and writing to them and seeing who answers. So I'm going to do that for real and show what happens, including when nobody replies." },
+      { id: "l02", ts: at(0, 23, 5), kind: "decision", title: "Rules I set for myself",
+        takeaway: "No invented numbers. Honest disclosure in every message.",
+        raw: "Rules. One, I don't make up a single number. Two, every message says I'm not on the Wispr team, because otherwise it feels like I'm pretending to be someone I'm not. Three, I write down the failures. If it's embarrassing it still goes in the log. Okay, that's it, going to sleep." },
+      { id: "l03", ts: at(1, 11, 15), kind: "mistake", title: "I started with the biggest names",
+        takeaway: "Big channels are slow to reply and rarely say yes to a stranger.",
+        raw: "So I sent my first three messages and, honestly, I picked the biggest creators first. Because that felt like the impressive thing to do. But a channel with half a million subscribers has a manager and a queue, and I'm a student with a Gmail address. I think I got the order backwards. Start small, learn, then go up." },
+      { id: "l04", ts: at(1, 22, 40), kind: "learning", title: "Writing the message takes longer than finding the creator",
+        takeaway: "The research for one good opening line is about fifteen minutes.",
+        raw: "I timed myself. Finding a creator takes me two minutes. Watching enough of their video to find one specific thing to say takes like fifteen. And that's the part that matters, because the generic ones, you can tell, they read like a template. So fewer messages, but each one actually has to be about the person." },
+      { id: "l05", ts: at(2, 9, 50), kind: "pivot", title: "I built the scorer so I'd stop guessing",
+        takeaway: "Five criteria, adjustable weights, decided before I send anything.",
+        raw: "Right, I keep choosing creators on gut feeling and gut feeling just told me to message a gaming channel, so, no. I'm going to write down what a good fit actually means. Does their audience type a lot. Do they make tutorials. Are the views healthy for their size. Is the price sensible. Is there a competitor. Five things. And I'll make the weights adjustable so I can argue with myself." },
+      { id: "l06", ts: at(2, 21, 30), kind: "learning", title: "Hinglish openers got replies faster",
+        takeaway: "Casual, specific Hinglish beat polished English for the Hinglish audiences.",
+        raw: "Two of the Hinglish messages got an answer within a day. One was from a manager, but still. And one of them actually said it read like a person wrote it. Which, I did. But I think the point is it didn't sound like a pitch." },
+      { id: "l07", ts: at(3, 12, 10), kind: "mistake", title: "I pitched someone who already has a dictation partner",
+        takeaway: "Check for a competing partnership before writing a word.",
+        raw: "The founder one replied, which is nice, and they're tied up with another dictation tool until March. Which I could have found out in two minutes by scrolling their last few posts. I just didn't. So now there's a penalty in the scorer for that, and I check first." },
+      { id: "l08", ts: at(3, 19, 45), kind: "decision", title: "Fewer, better messages",
+        takeaway: "Four careful messages a day, not ten quick ones.",
+        raw: "Okay so the ones I rushed are the ones that got nothing. So the new rule is four messages a day, maximum, and each one has to have something I could only know if I watched their stuff. If I can't find that thing, I skip them. Quality over, yeah, over the number." },
+      { id: "l09", ts: at(4, 8, 55), kind: "learning", title: "Follow-ups should be shorter than the first message",
+        takeaway: "Two lines, one question.",
+        raw: "I sent a follow-up and it was longer than my original. Why would anyone want a longer message from someone who didn't reply? Cutting it down to two lines with just the question. Hey, did you get a chance to look, would a short demo be easier." },
+      { id: "l10", ts: at(4, 23, 20), kind: "mistake", title: "I pitched a lifestyle creator just to hit a number",
+        takeaway: "A low score before sending means don't send.",
+        raw: "I need to be honest, I messaged a sneaker and lifestyle creator yesterday because I wanted the count to be higher. The scorer said it was a bad fit. I knew. I sent it anyway. That's a wasted slot and a worse reason. The number isn't the point." },
+      { id: "l11", ts: at(5, 10, 5), kind: "learning", title: "Flow wrote 'Wispr' as 'Whisper' twice today",
+        takeaway: "Proper nouns and the product's own name are where I still correct by hand.",
+        raw: "Small thing, but when I say Wispr it came out as whisper, the other one, twice this morning. I fixed both by hand. Everything else in this paragraph it got right, including the Hindi bit. So it's not the sentences that slip, it's names. I'm going to note that for the Hinglish test." },
+      { id: "l12", ts: at(5, 18, 30), kind: "pivot", title: "First ask is now small",
+        takeaway: "Ask for a chat or a one-week trial. Rates come later.",
+        raw: "Looking at who replied, the ones that said yes had a small ask. Try it for a week. Or a short call. The ones where I opened with a rate card question went nowhere. So the first message never mentions money anymore. That comes after they've actually used it." },
+      { id: "l13", ts: at(6, 9, 10), kind: "decision", title: "Testing Hindi and Odia before I pitch more of them",
+        takeaway: "Two creators asked about regional languages. I should know the answer.",
+        raw: "The Odia creator said yes to a call, and a Hindi one asked straight away if it works in Hindi, and I don't actually know how well it handles my accent and the mixed Hindi English I speak. So before I pitch anyone else in that segment, I'm going to test it properly and write down exactly what breaks." },
+      { id: "l14", ts: at(6, 14, 25), kind: "learning", title: "Anyone with a manager wants a demo first",
+        takeaway: "Prepare a 45-second demo before the rate conversation.",
+        raw: "The student creator's manager wrote back and asked for a forty five second demo before we talk rates. Fair. So I need one that's tailored, in Hinglish, with notes. Not a generic screen recording. I'll record it tonight and send it tomorrow morning." }
+    ]
+  };
+})();
+
+</script>
+<script>
+(() => {
+"use strict";
+
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const num = n => Math.round(n).toLocaleString("en-IN");
+const inr = n => "₹" + num(n);
+const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const uid = () => Math.random().toString(36).slice(2, 9);
+const wordCount = t => (String(t || "").match(/\S+/g) || []).length;
+const dayKey = iso => { const d = new Date(iso); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; };
+const fmtDate = (iso, opts = { day: "numeric", month: "short" }) => iso ? new Date(iso).toLocaleDateString("en-IN", opts) : "";
+const fmtTime = iso => new Date(iso).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit" });
+
+const params = new URLSearchParams(location.search);
+const EDIT = params.has("edit");
+const STORE = "creator-sprint-portfolio:v1";
+
+/* ---------- scoring model (all of this is my judgement, not Wispr data) ---------- */
+
+const NICHES = {
+  "Productivity / workflow": { need: 95,
+    en: "You already show people how to remove friction from their day, and typing is the friction most of them have never questioned.",
+    hi: "Aap already dikhate hain ki din ka friction kaise kam karein, aur typing wo friction hai jise zyada log question hi nahi karte." },
+  "Coding / dev": { need: 90,
+    en: "Developers spend a surprising share of the day writing things that aren't code: PR descriptions, Slack threads, docs, and prompts to AI tools.",
+    hi: "Developers ka kaafi time code ke alawa likhne mein jaata hai: PR descriptions, Slack, docs aur AI tools ke prompts." },
+  "Writing / journalism / newsletters": { need: 90,
+    en: "Getting a first draft out at speaking speed and then editing it is a different way to write, and writers tend to notice the difference quickly.",
+    hi: "Bolkar first draft nikalna aur phir edit karna likhne ka alag tareeka hai, aur writers ko ye jaldi samajh aata hai." },
+  "Startups / founders": { need: 82,
+    en: "Founders live in email, Slack and investor updates, which is a lot of typing that doesn't need to be typed.",
+    hi: "Founders ka din email, Slack aur investor updates mein jaata hai, aur is typing ka bada hissa bolkar ho sakta hai." },
+  "Students / exam prep (UPSC, CAT, JEE…)": { need: 80,
+    en: "Notes, answer-writing practice and long messages all go faster when you can talk them out first.",
+    hi: "Notes, answer-writing practice aur lambe messages bolkar kaafi tez ho jaate hain." },
+  "Law / CA / professional services": { need: 78,
+    en: "Long drafts and client emails are exactly where speaking beats typing.",
+    hi: "Lambe drafts aur client emails wahi jagah hain jahan bolna typing se tez hai." },
+  "Tech reviews / gadgets": { need: 72,
+    en: "It's a tool your audience can try in thirty seconds, so a before-and-after is easy to film.",
+    hi: "Ye aisa tool hai jise aapki audience 30 second mein try kar sakti hai, to before-and-after film karna aasaan hai." },
+  "Education (vernacular)": { need: 68,
+    en: "Typing in Indian languages is slow on most keyboards, and speaking isn't.",
+    hi: "Indian languages mein typing zyadatar keyboards par slow hai, bolna nahi." },
+  "Personal finance / investing": { need: 50,
+    en: "Scripts, newsletters and research notes are a lot of writing for someone who also has to record.",
+    hi: "Scripts, newsletters aur research notes mein kaafi likhna padta hai, jabki record bhi karna hota hai." },
+  "Lifestyle / vlog": { need: 30,
+    en: "Honestly the fit is thinner for your niche, so I'd keep any collaboration small and specific.",
+    hi: "Sach kahun to aapki niche mein fit thoda kam hai, isliye collaboration chhota aur specific rakhna chahiye." },
+  "Gaming / entertainment": { need: 22,
+    en: "Honestly the fit is thin for your niche, so this would only make sense as a very specific idea.",
+    hi: "Sach kahun to aapki niche mein fit kam hai, to ye sirf ek bahut specific idea ke roop mein bante." }
+};
+// Hinglish scores highest on purpose: mixed-language typing is where dictation saves the most effort.
+const LANGS = { "English": 70, "Hinglish": 88, "Hindi": 78, "Tamil / Telugu / Kannada / Malayalam": 72, "Bengali / Marathi / other": 70 };
+const CONTENT = { "Tutorials / workflows": 92, "Tool reviews": 85, "Talking-head commentary": 60, "Vlog / lifestyle": 40, "Entertainment / skits": 25 };
+const PLATFORMS = { "Instagram": 0.25, "YouTube": 0.12, "X": 0.04, "LinkedIn": 0.06 };
+const RISK = [["No competing tool seen", 0], ["Mentions competing tools sometimes", -6], ["Paid partner of a competing tool", -20]];
+const STATUS = [["identified", "Identified"], ["pitched", "Pitched"], ["replied", "Replied"], ["talking", "In conversation"], ["won", "Agreed"], ["passed", "Passed or no reply"]];
+const KINDS = [["decision", "Decision"], ["mistake", "Mistake"], ["pivot", "Pivot"], ["learning", "Learning"]];
+const PARTS = [["audience", "Audience fit"], ["content", "Content fit"], ["engagement", "Engagement"], ["language", "Language"], ["cost", "Cost"]];
+const ASKS = {
+  chat: { en: "Would you be open to a 10-minute chat this week?", hi: "Kya is hafte 10 minute ki quick baat ho sakti hai?" },
+  demo: { en: "Can I send you a 60-second demo tailored to your audience?", hi: "Kya main aapki audience ke liye 60 second ka demo bhej doon?" },
+  rate: { en: "Do you have a media kit or rate card I could look at?", hi: "Kya aapka media kit ya rate card mil sakta hai?" },
+  try: { en: "Would you try it for a week and tell me honestly what you think, including if it isn't for you?", hi: "Kya aap ek hafta try karke honestly bata sakte hain? Pasand na aaye to wo bhi." }
+};
+
+let model = {
+  weights: { audience: 30, content: 20, engagement: 20, language: 10, cost: 20 },
+  assume: { targetCpm: 250, ctr: 0.8, signup: 30, paid: 6 }
+};
+
+const scale = (x, b) => (x <= b ? 60 * x / b : Math.min(100, 60 + 40 * (x - b) / b));
+
+function scoreCreator(c) {
+  const followers = +c.followers || 0, views = +c.avgViews || 0, comments = +c.comments || 0, price = +c.price || 0;
+  const bench = PLATFORMS[c.platform] ?? 0.1;
+  const rate = followers > 0 ? views / followers : 0;
+  const commentRate = views > 0 ? comments / views : 0;
+  const engagement = followers > 0 && views > 0 ? Math.round(0.75 * scale(rate, bench) + 0.25 * scale(commentRate, 0.003)) : 0;
+  const cpm = views > 0 && price > 0 ? price / views * 1000 : null;
+  const cost = price > 0 ? (cpm ? Math.round(scale(model.assume.targetCpm / cpm, 1)) : 0) : 85;
+  const parts = {
+    audience: NICHES[c.niche]?.need ?? 50,
+    content: CONTENT[c.contentType] ?? 50,
+    engagement,
+    language: LANGS[c.language] ?? 70,
+    cost
+  };
+  const w = model.weights;
+  const wsum = Object.values(w).reduce((a, b) => a + b, 0) || 1;
+  const base = PARTS.reduce((s, [k]) => s + parts[k] * w[k], 0) / wsum;
+  const risk = +c.risk || 0;
+  const total = Math.round(clamp(base + risk, 0, 100));
+  const a = model.assume;
+  const signups = views * (a.ctr / 100) * (a.signup / 100);
+  const paying = signups * (a.paid / 100);
+  return {
+    parts, total, risk, rate, bench, cpm, price, views,
+    signups, paying,
+    perSignup: price > 0 && signups > 0 ? price / signups : null,
+    perPaying: price > 0 && paying > 0 ? price / paying : null,
+    tier: total >= 75 ? ["Pitch first", "Strong fit on audience and economics."]
+      : total >= 60 ? ["Pitch", "Good fit. Worth a personalised message."]
+      : total >= 45 ? ["Nurture", "Engage with their content before asking for anything."]
+      : ["Skip", "The numbers or the niche don't justify a pitch yet."]
+  };
+}
+
+/* ---------- state ---------- */
+
+let state;
+function clone(o) { return JSON.parse(JSON.stringify(o)); }
+function loadState() {
+  if (EDIT) {
+    try { const s = localStorage.getItem(STORE); if (s) return JSON.parse(s); } catch (e) { /* storage unavailable */ }
+  }
+  return clone(window.SITE_DATA);
+}
+function save() {
+  if (!EDIT) return;
+  try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { toast("Couldn't save in this browser. Export before you close the tab."); }
+}
+let toastTimer;
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("on");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("on"), 2200);
+}
+const charMarkup = (shirt, hair, lens) => `
+<svg class="char-svg" viewBox="0 0 220 260" aria-hidden="true" style="--shirt:${shirt};--hair:${hair};--lens:${lens}">
+  <g class="bob">
+    <path d="M6 262 C6 192 52 166 110 166 C168 166 214 192 214 262 Z" fill="${shirt}" stroke="#1b1b18" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M34 216 C22 178 40 142 72 124" fill="none" stroke="#1b1b18" stroke-width="31" stroke-linecap="round"/>
+    <path d="M186 216 C198 178 180 142 148 124" fill="none" stroke="#1b1b18" stroke-width="31" stroke-linecap="round"/>
+    <path d="M34 216 C22 178 40 142 72 124" fill="none" stroke="${shirt}" stroke-width="21" stroke-linecap="round"/>
+    <path d="M186 216 C198 178 180 142 148 124" fill="none" stroke="${shirt}" stroke-width="21" stroke-linecap="round"/>
+    <ellipse cx="110" cy="100" rx="50" ry="54" fill="#fffef6" stroke="#1b1b18" stroke-width="5"/>
+    <path d="M58 98 C44 26 176 18 162 98 C150 62 86 56 58 98Z" fill="${hair}" stroke="#1b1b18" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="72" cy="128" r="8" fill="#ff9d8a" opacity=".6"/><circle cx="148" cy="128" r="8" fill="#ff9d8a" opacity=".6"/>
+    <rect x="103" y="92" width="14" height="18" fill="#1b1b18"/>
+    <circle cx="86" cy="106" r="24" fill="${lens}" stroke="#1b1b18" stroke-width="5"/>
+    <circle cx="134" cy="106" r="24" fill="${lens}" stroke="#1b1b18" stroke-width="5"/>
+    <circle cx="86" cy="106" r="12" fill="#fffef6"/><circle cx="134" cy="106" r="12" fill="#fffef6"/>
+    <g class="pup"><circle cx="87" cy="107" r="5.5" fill="#1b1b18"/><circle cx="135" cy="107" r="5.5" fill="#1b1b18"/></g>
+    <g class="glint"><circle cx="78" cy="96" r="3" fill="#fff"/><circle cx="126" cy="96" r="3" fill="#fff"/></g>
+    <ellipse class="mouth" cx="110" cy="148" rx="9" ry="6" fill="#7a2a1c" stroke="#1b1b18" stroke-width="4"/>
+    <circle cx="72" cy="128" r="12" fill="#fffef6" stroke="#1b1b18" stroke-width="5"/>
+    <circle cx="148" cy="128" r="12" fill="#fffef6" stroke="#1b1b18" stroke-width="5"/>
+    <g class="voice" fill="#1b1b18"><rect x="176" y="76" width="7" height="24" rx="3.5"/><rect x="188" y="60" width="7" height="40" rx="3.5"/><rect x="200" y="76" width="7" height="24" rx="3.5"/></g>
+  </g>
+</svg>`;
+const charSvg = (shirt, hair, lens, w = 130) => `<span class="char-inline" style="width:${w}px">${charMarkup(shirt, hair, lens)}</span>`;
+const hasReply = c => !!(c.reply && c.reply.trim()) || ["replied", "talking", "won"].includes(c.status);
+const wasPitched = c => c.status !== "identified";
+
+/* ---------- hero ---------- */
+
+function renderHero() {
+  const p = state.profile, sp = state.sprint, cs = state.creators;
+  $("#brand").textContent = p.name;
+  document.title = `${p.name}: outreach sprint for Wispr Flow India`;
+  const first = (p.name || "").trim().split(/\s+/)[0] || "there";
+  $("#h1").innerHTML = p.headline ? esc(p.headline) : `Applying to Wispr Flow's growth team <span class="big">by doing the work.</span>`;
+  $("#lede").textContent = p.lede ||
+    `Hi, I'm ${first}. For a week I've been pitching real creators on Wispr Flow, keeping score of what works, and talking my decisions out loud as I go. It's all below, including what went wrong.`;
+
+  const start = new Date(sp.start + "T00:00:00"), end = new Date(sp.end + "T23:59:59");
+  const now = new Date(), total = Math.round((new Date(sp.end + "T00:00:00") - start) / 864e5) + 1;
+  const day = Math.floor((now - start) / 864e5) + 1;
+  $("#dayline").textContent = now < start ? `Challenge opens ${fmtDate(sp.start)}`
+    : now > end ? "Sprint closed. This is the final record."
+    : `Day ${day} of ${total}. Submissions close ${fmtDate(sp.end)}.`;
+
+  const contacted = cs.filter(wasPitched).length;
+  const replied = cs.filter(c => wasPitched(c) && hasReply(c)).length;
+  const talking = cs.filter(c => ["talking", "won"].includes(c.status)).length;
+  const won = cs.filter(c => c.status === "won").length;
+  const open = talking;
+  const steps = [
+    ["Creators found", cs.length, `goal: ${sp.target}`],
+    ["Messages sent", contacted, cs.length ? `${Math.round(contacted / cs.length * 100)}% of those found` : ""],
+    ["Replies", replied, contacted ? `${Math.round(replied / contacted * 100)}% replied` : ""],
+    ["Open to working together", open, won ? `${won} said yes` : (replied ? "in conversation" : "")]
+  ];
+  $("#funnel").innerHTML = steps.map(([label, n, sub]) => `
+    <div class="fstep"><div class="fnum">${n}</div><div class="flabel">${label}</div><div class="fsub">${esc(sub)}</div></div>`).join("");
+
+  const words = state.log.reduce((s, e) => s + wordCount(e.raw), 0);
+  const days = new Set(state.log.map(e => dayKey(e.ts))).size;
+  const mistakes = state.log.filter(e => e.kind === "mistake").length;
+  $("#voiceline").innerHTML = state.log.length
+    ? `<mark>${num(words)} words</mark> dictated across <b>${state.log.length}</b> log entries on <b>${days}</b> ${days === 1 ? "day" : "days"}, including <b>${mistakes}</b> ${mistakes === 1 ? "mistake" : "mistakes"} I wrote down instead of hiding.`
+    : "The voice log is empty so far. Entries appear here as I dictate them.";
+}
+
+/* ---------- pipeline ledger ---------- */
+
+let statusFilter = "all", view = "list", sortBy = "score";
+function renderChips() {
+  const cs = state.creators;
+  const counts = Object.fromEntries(STATUS.map(([k]) => [k, cs.filter(c => c.status === k).length]));
+  const items = [["all", "All", cs.length], ...STATUS.map(([k, l]) => [k, l, counts[k]])].filter(([k, , n]) => k === "all" || n > 0);
+  $("#status-chips").innerHTML = items.map(([k, l, n]) =>
+    `<button class="chip" type="button" data-f="${k}" aria-pressed="${statusFilter === k}">${l}<span class="n">${n}</span></button>`).join("");
+}
+const tierKey = n => (n >= 75 ? "hi" : n >= 60 ? "mid" : n >= 45 ? "low" : "skip");
+const SORTERS = {
+  score: (x, y) => y.s.total - x.s.total,
+  recent: (x, y) => (y.c.pitchedOn || "").localeCompare(x.c.pitchedOn || "") || y.s.total - x.s.total,
+  name: (x, y) => x.c.name.localeCompare(y.c.name)
+};
+
+function renderTools() {
+  $("#sprint-tools").innerHTML = `
+    <div class="seg" role="group" aria-label="View">
+      <button type="button" data-view="list" aria-pressed="${view === "list"}">List</button>
+      <button type="button" data-view="board" aria-pressed="${view === "board"}">Board</button>
+    </div>
+    <label class="sortby">Sort by
+      <select class="in" id="sort"><option value="score">Fit score</option><option value="recent">Most recent</option><option value="name">Name</option></select>
+    </label>
+    <button class="btn ghost small" type="button" id="csv">Download CSV</button>`;
+  $("#sort").value = sortBy;
+}
+
+function renderBoard(items) {
+  $("#board").innerHTML = STATUS.map(([k, l]) => {
+    const col = items.filter(x => x.c.status === k);
+    return `<div class="col"><h4>${l}<span>${col.length}</span></h4>${col.map(({ c, s }) => `
+      <button class="bcard" type="button" data-id="${esc(c.id)}"><span class="sc" data-t="${tierKey(s.total)}">${s.total}</span>
+      <span><b>${esc(c.name)}</b><small>${esc(c.niche)}</small></span></button>`).join("") || `<p class="none">Nobody here</p>`}</div>`;
+  }).join("");
+}
+
+function renderLedger() {
+  renderChips();
+  const all = state.creators.map(c => ({ c, s: scoreCreator(c) })).sort(SORTERS[sortBy]);
+  const board = view === "board" && state.creators.length > 0;
+  $("#ledger").hidden = board; $("#board").hidden = !board; $("#status-chips").hidden = board;
+  $("#sprint-tools").hidden = !state.creators.length;
+  const el = $("#ledger");
+  if (!state.creators.length) {
+    el.innerHTML = `<div class="empty">${charSvg("#ffa64a", "#1b1b18", "#03493f")}<strong>Nothing here yet.</strong>I'd rather show an empty board than a made-up one. Creators appear here as I find and message them.</div>`;
+    return;
+  }
+  if (board) { renderBoard(all); return; }
+  const rows = all.filter(x => statusFilter === "all" || x.c.status === statusFilter);
+  if (!rows.length) { el.innerHTML = `<div class="empty">No creators with this status.</div>`; return; }
+  el.innerHTML = `<div class="lhead"><span>Creator</span><span>Niche</span><span>Fit score</span><span>Status</span><span>Pitched</span><span>Reply</span></div>` +
+    rows.map(({ c, s }) => `
+    <button class="lrow" type="button" data-id="${esc(c.id)}">
+      <span class="lname">${esc(c.name)}<small>${esc(c.handle)} on ${esc(c.platform)}</small></span>
+      <span class="lniche">${esc(c.niche)}</span>
+      <span class="lscore"><span class="sc" data-t="${tierKey(s.total)}">${s.total}</span></span>
+      <span class="lstat"><span class="pill" data-s="${c.status}">${esc(STATUS.find(x => x[0] === c.status)?.[1] || c.status)}</span></span>
+      <span class="lpitched">${c.pitchedOn ? fmtDate(c.pitchedOn) : '<span class="dash">-</span>'}</span>
+      <span class="lreply">${wasPitched(c) ? (hasReply(c) ? '<span class="tick">Yes</span>' : '<span class="dash">None</span>') : '<span class="dash">-</span>'}</span>
+    </button>`).join("");
+}
+
+function downloadCsv() {
+  const cols = ["name", "handle", "platform", "niche", "language", "followers", "avgViews", "comments", "price", "fitScore", "status", "pitchedOn", "replied"];
+  const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
+  const rows = state.creators.map(c => [c.name, c.handle, c.platform, c.niche, c.language, c.followers, c.avgViews, c.comments, c.price, scoreCreator(c).total, c.status, c.pitchedOn, hasReply(c) ? "yes" : "no"]);
+  const csv = [cols.join(","), ...rows.map(r => r.map(q).join(","))].join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = "outreach-pipeline.csv"; a.click();
+  toast("Downloaded");
+}
+
+$("#board").addEventListener("click", e => { const b = e.target.closest(".bcard"); if (b) openCreator(b.dataset.id); });
+$("#sprint-tools").addEventListener("click", e => {
+  const v = e.target.closest("[data-view]");
+  if (v) { view = v.dataset.view; renderTools(); renderLedger(); }
+  if (e.target.id === "csv") downloadCsv();
+});
+$("#sprint-tools").addEventListener("change", e => { if (e.target.id === "sort") { sortBy = e.target.value; renderLedger(); } });
+$("#featured").addEventListener("click", e => { const b = e.target.closest("[data-id]"); if (b) openCreator(b.dataset.id); });
+
+/* ---------- day by day ---------- */
+
+function renderDays() {
+  const sp = state.sprint, el = $("#days");
+  const start = new Date(sp.start + "T00:00:00"), end = new Date(sp.end + "T00:00:00");
+  const n = Math.round((end - start) / 864e5) + 1;
+  const key = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const days = Array.from({ length: n }, (_, i) => { const d = new Date(start); d.setDate(d.getDate() + i); return d; });
+  const msgs = days.map(d => state.creators.filter(c => c.pitchedOn === key(d)).length);
+  const wds = days.map(d => state.log.filter(e => key(new Date(e.ts)) === key(d)).reduce((t, e) => t + wordCount(e.raw), 0));
+  if (!msgs.some(Boolean) && !wds.some(Boolean)) { el.innerHTML = ""; return; }
+  const mm = Math.max(...msgs, 1), mw = Math.max(...wds, 1);
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  el.innerHTML = `<h3>Day by day</h3><div class="days-grid" style="--n:${n}">${days.map((d, i) => `
+    <div class="dcol${d > today ? " future" : ""}">
+      <div class="dbar m" title="${msgs[i]} messages"><b>${msgs[i] || ""}</b>${msgs[i] ? `<i style="height:${Math.max(6, Math.round(msgs[i] / mm * 62))}px"></i>` : ""}</div>
+      <div class="dbar w" title="${wds[i]} words"><b>${wds[i] || ""}</b>${wds[i] ? `<i style="height:${Math.max(6, Math.round(wds[i] / mw * 62))}px"></i>` : ""}</div>
+      <span class="dl">${d.toLocaleDateString("en-IN", { weekday: "short" })}<small>${d.toLocaleDateString("en-IN", { day: "numeric", month: "short" })}</small></span>
+    </div>`).join("")}</div>
+    <p class="legend"><span><span class="k m"></span>Messages sent</span><span><span class="k w"></span>Words dictated</span></p>`;
+}
+
+/* ---------- two threads worth reading ---------- */
+
+function renderFeatured() {
+  const el = $("#featured");
+  const rank = { won: 3, talking: 2, replied: 1 };
+  const withMsg = state.creators.filter(c => c.message && c.message.trim());
+  const worked = withMsg.filter(c => rank[c.status])
+    .sort((a, b) => rank[b.status] - rank[a.status] || scoreCreator(b).total - scoreCreator(a).total)[0];
+  const flop = withMsg.filter(c => c.status === "passed" && !hasReply(c))
+    .sort((a, b) => (b.lesson ? 1 : 0) - (a.lesson ? 1 : 0) || scoreCreator(b).total - scoreCreator(a).total)[0];
+  const card = (c, tag, cls) => `<article class="feat ${cls}">
+      <span class="pill">${tag}</span><h3>${esc(c.name)}</h3>
+      <p class="fmeta">${esc(c.handle)} on ${esc(c.platform)}, fit score ${scoreCreator(c).total}</p>
+      <h4>What I sent</h4><blockquote><div class="clampi">${esc(c.message)}</div></blockquote>
+      <h4>What came back</h4>${c.reply ? `<blockquote>${esc(c.reply)}</blockquote>` : `<blockquote class="silent">Nothing.</blockquote>`}
+      ${c.lesson ? `<p class="flesson"><b>What I learned:</b> ${esc(c.lesson)}</p>` : ""}
+      <button class="btn ghost small" type="button" data-id="${esc(c.id)}">Read the full thread</button></article>`;
+  const cards = [worked && card(worked, "The message that worked", "worked"), flop && card(flop, "The one that didn't", "flopped")].filter(Boolean);
+  el.innerHTML = cards.length ? `<h3 class="featured-title">Two threads worth reading</h3><div class="feat-grid">${cards.join("")}</div>` : "";
+}
+
+/* ---------- insights: does the score predict replies? ---------- */
+
+function renderInsights() {
+  const el = $("#insights");
+  const pitched = state.creators.filter(wasPitched).map(c => ({ c, s: scoreCreator(c).total, r: hasReply(c) }));
+  if (pitched.length < 5) { el.innerHTML = ""; return; }
+  const rate = g => g.filter(x => x.r).length;
+  const langs = [...new Set(pitched.map(x => x.c.language))];
+  const sets = [
+    ["By fit score", [["75 and up", x => x.s >= 75], ["60 to 74", x => x.s >= 60 && x.s < 75], ["Below 60", x => x.s < 60]]],
+    ["By language", langs.map(l => [l, x => x.c.language === l])],
+    ["By platform", [...new Set(pitched.map(x => x.c.platform))].map(p => [p, x => x.c.platform === p])]
+  ];
+  const hi = pitched.filter(x => x.s >= 60), lo = pitched.filter(x => x.s < 60);
+  const take = hi.length && lo.length
+    ? `Creators scoring 60 or more replied ${Math.round(rate(hi) / hi.length * 100)}% of the time (${rate(hi)} of ${hi.length}). Below 60, ${Math.round(rate(lo) / lo.length * 100)}% (${rate(lo)} of ${lo.length}). The sample is small, so I treat this as something to test further, not proof.`
+    : "";
+  el.innerHTML = `<h3>What the replies are telling me</h3>${take ? `<p class="take">${take}</p>` : ""}
+    <div class="ins-grid">${sets.map(([title, rows]) => `<div><h4>${title}</h4>${rows.map(([label, fn]) => {
+      const g = pitched.filter(fn); if (!g.length) return "";
+      const n = rate(g), pct = Math.round(n / g.length * 100);
+      return `<div class="ins-row"><span>${esc(label)}</span><span class="bar"><i style="width:${pct}%"></i></span><span class="pv">${n}/${g.length}</span></div>`;
+    }).join("")}</div>`).join("")}</div>`;
+}
+
+/* ---------- creator dialog ---------- */
+
+function opt(list, cur) { return list.map(([v, l]) => `<option value="${esc(v)}"${v === cur ? " selected" : ""}>${esc(l)}</option>`).join(""); }
+
+function openCreator(id) {
+  const c = state.creators.find(x => x.id === id); if (!c) return;
+  const s = scoreCreator(c), dlg = $("#dlg");
+  const statusLabel = STATUS.find(x => x[0] === c.status)?.[1];
+  let body;
+  if (EDIT) {
+    body = `
+      <div class="grid2">
+        <label class="f">Status<select class="in" name="status">${opt(STATUS, c.status)}</select></label>
+        <label class="f">Pitched on<input class="in" type="date" name="pitchedOn" value="${esc(c.pitchedOn)}"></label>
+      </div>
+      <label class="f">Message I sent<textarea class="in" name="message" rows="6">${esc(c.message)}</textarea></label>
+      <label class="f">Their reply<textarea class="in" name="reply" rows="3">${esc(c.reply)}</textarea></label>
+      <label class="f">What I learned<textarea class="in" name="lesson" rows="3">${esc(c.lesson)}</textarea></label>
+      <div class="row-actions">
+        <button class="btn accent" type="button" data-act="save">Save changes</button>
+        <button class="btn ghost" type="button" data-act="score">Open in scorer</button>
+        <button class="btn danger" type="button" data-act="delete">Delete creator</button>
+        <button class="btn ghost" type="button" data-act="close">Close</button>
+      </div>`;
+  } else {
+    body = `
+      ${c.message ? `<h4>What I sent</h4><blockquote>${esc(c.message)}</blockquote>` : ""}
+      ${c.reply ? `<h4>What came back</h4><blockquote>${esc(c.reply)}</blockquote>` : ""}
+      ${c.lesson ? `<h4>What I learned</h4><blockquote>${esc(c.lesson)}</blockquote>` : ""}
+      ${!c.message && !c.reply && !c.lesson ? `<p class="meta">Not pitched yet.</p>` : ""}
+      <div class="row-actions">
+        <button class="btn accent" type="button" data-act="score">See how it scored</button>
+        <button class="btn ghost" type="button" data-act="close">Close</button>
+      </div>`;
+  }
+  dlg.innerHTML = `<form method="dialog" class="dlg" data-id="${esc(c.id)}">
+    <div><h3>${esc(c.name)}</h3>
+    <div class="meta">${esc(c.handle)} on ${esc(c.platform)} · ${esc(c.niche)} · ${esc(c.language)} · fit score ${s.total} (${s.tier[0]}) · ${esc(statusLabel)}</div></div>
+    <div class="mini">${PARTS.map(([k, l]) => `<div class="part"><span>${l}</span><span class="bar"><i style="width:${s.parts[k]}%"></i></span><span class="pv">${s.parts[k]}</span></div>`).join("")}</div>
+    ${body}</form>`;
+  dlg.showModal();
+}
+
+$("#dlg").addEventListener("click", e => {
+  const dlg = e.currentTarget;
+  if (e.target === dlg) return dlg.close();
+  const btn = e.target.closest("[data-act]"); if (!btn) return;
+  const form = btn.closest("form"), id = form.dataset.id;
+  const c = state.creators.find(x => x.id === id);
+  const act = btn.dataset.act;
+  if (act === "close") dlg.close();
+  if (act === "score") { loadIntoScorer(c); dlg.close(); $("#scorer").scrollIntoView(); }
+  if (act === "save") {
+    for (const k of ["status", "pitchedOn", "message", "reply", "lesson"]) c[k] = form.elements[k].value;
+    save(); renderAll(); dlg.close(); toast("Saved");
+  }
+  if (act === "delete" && confirm(`Delete ${c.name} from the pipeline?`)) {
+    state.creators = state.creators.filter(x => x.id !== id);
+    save(); renderAll(); dlg.close();
+  }
+});
+
+$("#ledger").addEventListener("click", e => { const r = e.target.closest(".lrow"); if (r) openCreator(r.dataset.id); });
+$("#status-chips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  statusFilter = b.dataset.f; renderLedger();
+});
+
+/* ---------- scorer ---------- */
+
+let F = {
+  name: "Example creator", handle: "@example", platform: "Instagram", niche: "Coding / dev", language: "Hinglish",
+  contentType: "Tutorials / workflows", followers: 120000, avgViews: 30000, comments: 90, price: 9000, risk: 0,
+  note: "", observed: "", ask: "chat", editingId: null, touched: false
+};
+
+function buildScorerForm() {
+  const sel = (k, list) => `<select class="in" name="${k}">${list.map(v => `<option>${esc(v)}</option>`).join("")}</select>`;
+  $("#scorer-form").innerHTML = `
+    <h3>Creator</h3>
+    <label class="f">Name<input class="in" name="name"></label>
+    <label class="f">Handle<input class="in" name="handle"></label>
+    <label class="f">Platform${sel("platform", Object.keys(PLATFORMS))}</label>
+    <label class="f">Language${sel("language", Object.keys(LANGS))}</label>
+    <label class="f wide">Niche${sel("niche", Object.keys(NICHES))}</label>
+    <label class="f wide">What they mostly post${sel("contentType", Object.keys(CONTENT))}</label>
+    <h3>Public numbers</h3>
+    <label class="f">Followers<input class="in" type="number" min="0" name="followers"></label>
+    <label class="f">Average views per post<input class="in" type="number" min="0" name="avgViews"></label>
+    <label class="f">Average comments<input class="in" type="number" min="0" name="comments"></label>
+    <label class="f">Quoted price (₹)<input class="in" type="number" min="0" name="price" placeholder="0 if unknown"></label>
+    <label class="f wide">Competing tools
+      <select class="in" name="risk">${RISK.map(([l, v]) => `<option value="${v}">${esc(l)}</option>`).join("")}</select></label>
+    <h3>Pitch</h3>
+    <label class="f wide">One specific thing I noticed in their content<textarea class="in" name="note" rows="2" placeholder="Name a real video or post, and what stood out"></textarea></label>
+    <label class="f wide">One real thing I observed using Flow <span class="hint">(optional)</span><textarea class="in" name="observed" rows="2" placeholder="Only what actually happened to you"></textarea></label>
+    <label class="f wide">What I'm asking for
+      <select class="in" name="ask">
+        <option value="chat">A 10-minute chat</option><option value="demo">Permission to send a tailored demo</option>
+        <option value="rate">Their media kit or rate card</option><option value="try">Try it for a week and give honest feedback</option>
+      </select></label>
+    ${EDIT ? `<div class="wide row-actions"><button type="button" class="btn accent" id="save-creator">${F.editingId ? "Update creator" : "Add to pipeline"}</button><button type="button" class="btn ghost" id="new-creator">Clear form</button></div>` : ""}
+  `;
+  syncForm();
+}
+function syncForm() {
+  const f = $("#scorer-form");
+  for (const el of f.elements) if (el.name && el.name in F) el.value = F[el.name];
+  const sv = $("#save-creator"); if (sv) sv.textContent = F.editingId ? "Update creator" : "Add to pipeline";
+}
+function readForm() {
+  const f = $("#scorer-form");
+  for (const el of f.elements) {
+    if (!el.name || !(el.name in F)) continue;
+    F[el.name] = el.type === "number" ? (+el.value || 0) : (el.name === "risk" ? +el.value : el.value);
+  }
+  F.touched = true;
+}
+function loadIntoScorer(c) {
+  F = { ...F, ...c, risk: +c.risk || 0, note: F.note, observed: F.observed, editingId: c.id, touched: true };
+  syncForm(); renderResult();
+}
+
+function buildPitch(c) {
+  const nic = NICHES[c.niche] || NICHES["Productivity / workflow"];
+  const hi = ["Hinglish", "Hindi"].includes(c.language);
+  const first = (c.name || "").trim().split(/\s+/)[0] || "there";
+  const note = c.note.trim() || "[Add one specific thing from their content here before sending]";
+  const ask = ASKS[c.ask][hi ? "hi" : "en"];
+  const who = state.profile.name;
+  const lines = hi ? [
+    `Hi ${first}!`,
+    note,
+    nic.hi,
+    c.observed.trim() ? `Is hafte Flow use karte hue maine notice kiya: ${c.observed.trim()}` : "",
+    "Seedhi baat: abhi main Wispr Flow team ka hissa nahi hoon. Maine unki India growth team ke liye apply kiya hai, aur ye outreach meri application ka hissa hai. Main sirf unhi creators ko pitch kar raha hoon jinhe genuinely fit lagta hai.",
+    ask,
+    `- ${who}`
+  ] : [
+    `Hi ${first},`,
+    note,
+    nic.en,
+    c.observed.trim() ? `Using Wispr Flow this week, I noticed ${c.observed.trim().replace(/^[Ii] noticed /, "")}` : "",
+    "To be upfront: I'm not on the Wispr Flow team. I've applied to their India growth team, and this outreach is part of my application. I'm only pitching creators I think are a real fit.",
+    ask,
+    `${who}`
+  ];
+  const body = lines.filter(Boolean).join("\n\n");
+  return c.platform === "YouTube" ? `Subject: ${hi ? "Wispr Flow aur aapki audience" : "Wispr Flow and your audience"}\n\n${body}` : body;
+}
+
+function renderResult() {
+  const s = scoreCreator(F);
+  const circ = 2 * Math.PI * 56;
+  const whys = {
+    audience: `${F.niche}`,
+    content: `${F.contentType}`,
+    engagement: F.followers > 0 && F.avgViews > 0 ? `${(s.rate * 100).toFixed(1)}% view rate against a ${(s.bench * 100).toFixed(0)}% ${F.platform} benchmark` : "Enter followers and average views",
+    language: `${F.language}`,
+    cost: F.price > 0 ? (s.cpm ? `${inr(s.cpm)} per 1,000 views against a ${inr(model.assume.targetCpm)} target` : "Enter average views") : "No price given, so scored as neutral-good"
+  };
+  const pitch = buildPitch(F);
+  const pitchEl = $("#pitch-text");
+  const keepPitch = pitchEl && document.activeElement === pitchEl;
+  $("#scorer-result").innerHTML = `
+    <div class="rtop">
+      <div class="ring"><svg width="132" height="132" viewBox="0 0 132 132" aria-hidden="true">
+        <circle class="track" cx="66" cy="66" r="56" fill="none" stroke-width="12"/>
+        <circle class="val" cx="66" cy="66" r="56" fill="none" stroke-width="12" stroke-linecap="round"
+          stroke-dasharray="${circ}" stroke-dashoffset="${circ * (1 - s.total / 100)}"/></svg><b>${s.total}</b></div>
+      <div><div class="tier">${s.tier[0]}</div><div class="tier-sub">${s.tier[1]}</div>
+      ${s.risk ? `<div class="risk">Competitor penalty applied: ${s.risk}</div>` : ""}</div>
+    </div>
+    <div class="parts">${PARTS.map(([k, l]) => `
+      <div class="part"><span>${l}</span><span class="bar"><i style="width:${s.parts[k]}%"></i></span><span class="pv">${s.parts[k]}</span>
+      <span class="why">${esc(whys[k])}</span></div>`).join("")}</div>
+    <div class="econ">
+      <div><b>${s.cpm ? inr(s.cpm) : "-"}</b><span>CPM</span></div>
+      <div><b>${num(s.signups)}</b><span>est. signups</span></div>
+      <div><b>${s.perSignup ? inr(s.perSignup) : "-"}</b><span>per signup</span></div>
+      <div><b>${s.perPaying ? inr(s.perPaying) : "-"}</b><span>per paying user</span></div>
+    </div>
+    <p class="note">Estimates use my assumptions (see below), not Wispr Flow's numbers.</p>
+    <div class="pitch">
+      <div class="pitch-head"><span>First draft to send</span><button class="btn ghost small" type="button" id="copy-pitch">Copy</button></div>
+      <textarea class="in" id="pitch-text" rows="12" aria-label="Draft message">${esc(pitch)}</textarea>
+      ${F.note.trim() ? "" : `<p class="warn">Add one specific thing from their content before you send this. Generic pitches are the ones that get ignored.</p>`}
+    </div>`;
+  if (keepPitch) $("#pitch-text").focus();
+}
+
+$("#scorer-form").addEventListener("input", () => { readForm(); renderResult(); if (EDIT) { const sv = $("#save-creator"); if (sv) sv.textContent = F.editingId ? "Update creator" : "Add to pipeline"; } });
+$("#scorer-form").addEventListener("click", e => {
+  if (e.target.id === "new-creator") { F = { ...F, name: "", handle: "", note: "", observed: "", editingId: null, followers: 0, avgViews: 0, comments: 0, price: 0 }; syncForm(); renderResult(); }
+  if (e.target.id === "save-creator") {
+    if (!F.name.trim()) return toast("Add the creator's name first");
+    const rec = { name: F.name.trim(), handle: F.handle.trim(), platform: F.platform, niche: F.niche, language: F.language,
+      contentType: F.contentType, followers: F.followers, avgViews: F.avgViews, comments: F.comments, price: F.price, risk: F.risk };
+    const ex = state.creators.find(c => c.id === F.editingId);
+    if (ex) Object.assign(ex, rec);
+    else { const n = { id: uid(), status: "identified", pitchedOn: "", message: "", reply: "", lesson: "", ...rec }; state.creators.push(n); F.editingId = n.id; }
+    save(); renderAll(); toast(ex ? "Creator updated" : "Added to pipeline");
+  }
+});
+$("#scorer-result").addEventListener("click", async e => {
+  if (e.target.id !== "copy-pitch") return;
+  const t = $("#pitch-text");
+  try { await navigator.clipboard.writeText(t.value); } catch (err) { t.select(); document.execCommand("copy"); }
+  toast("Copied");
+});
+
+function buildModel() {
+  const w = model.weights, a = model.assume;
+  $("#model-body").innerHTML = `
+    <div><h4>Weights</h4>
+      ${PARTS.map(([k, l]) => `<label class="slider"><span>${l}</span><input type="range" min="0" max="50" step="5" value="${w[k]}" data-w="${k}"><output>${w[k]}</output></label>`).join("")}
+      <p class="note">Weights are relative, so they don't need to add up to 100. Risk is a flat penalty on top. Hinglish scores highest on language because mixed-language typing is where dictation saves the most effort. That's an assumption I'd test.</p></div>
+    <div><h4>Economics assumptions</h4>
+      <div class="assume">
+        <label for="a-cpm">Target CPM (₹)</label><input class="in" id="a-cpm" type="number" min="1" data-a="targetCpm" value="${a.targetCpm}">
+        <label for="a-ctr">Views that click (%)</label><input class="in" id="a-ctr" type="number" step="0.1" min="0" data-a="ctr" value="${a.ctr}">
+        <label for="a-su">Clicks that sign up (%)</label><input class="in" id="a-su" type="number" min="0" data-a="signup" value="${a.signup}">
+        <label for="a-pd">Signups that pay (%)</label><input class="in" id="a-pd" type="number" step="0.5" min="0" data-a="paid" value="${a.paid}">
+      </div>
+      <p class="note">These are placeholders to make the comparison between creators fair. Swap in Wispr Flow's real funnel rates and the ranking updates everywhere.</p></div>`;
+}
+$("#model-body").addEventListener("input", e => {
+  const t = e.target;
+  if (t.dataset.w) { model.weights[t.dataset.w] = +t.value; t.nextElementSibling.textContent = t.value; }
+  if (t.dataset.a) model.assume[t.dataset.a] = Math.max(0, +t.value || 0);
+  renderResult(); renderLedger(); renderInsights();
+});
+
+/* ---------- voice log ---------- */
+
+let kindFilter = "all";
+function renderComposer() {
+  const el = $("#composer");
+  if (!EDIT) { el.innerHTML = ""; return; }
+  el.innerHTML = `<form class="card composer" id="log-form">
+    <h3>New entry</h3>
+    <div class="two">
+      <label class="f">Title<input class="in" name="title" placeholder="What happened or what you decided" required></label>
+      <label class="f">Type<select class="in" name="kind">${opt(KINDS, "decision")}</select></label>
+    </div>
+    <label class="f">Talk with Wispr Flow, or press Dictate. Don't tidy it up.<textarea class="in raw" name="raw" required></textarea></label>
+    <label class="f">What I'm taking from it<input class="in" name="takeaway" placeholder="One sentence, typed or dictated"></label>
+    <div class="row-actions" style="margin:0"><button class="btn accent" type="submit">Add entry</button><button class="btn ghost" type="button" id="mic">Dictate here</button><span class="wc" id="wc">0 words</span></div>
+  </form>`;
+  setupMic();
+}
+$("#composer").addEventListener("input", e => { if (e.target.name === "raw") $("#wc").textContent = `${wordCount(e.target.value)} words`; });
+$("#composer").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target.elements;
+  state.log.push({ id: uid(), ts: new Date().toISOString(), kind: f.kind.value, title: f.title.value.trim(), raw: f.raw.value.trim(), takeaway: f.takeaway.value.trim() });
+  save(); renderAll(); toast("Entry added");
+});
+
+function renderTimeline() {
+  const counts = Object.fromEntries(KINDS.map(([k]) => [k, state.log.filter(e => e.kind === k).length]));
+  const items = [["all", "All", state.log.length], ...KINDS.map(([k, l]) => [k, l, counts[k]])].filter(([k, , n]) => k === "all" || n > 0);
+  $("#kind-chips").innerHTML = state.log.length ? items.map(([k, l, n]) =>
+    `<button class="chip" type="button" data-f="${k}" aria-pressed="${kindFilter === k}">${l}<span class="n">${n}</span></button>`).join("") : "";
+  const tl = $("#timeline");
+  const list = state.log.filter(e => kindFilter === "all" || e.kind === kindFilter).sort((a, b) => new Date(b.ts) - new Date(a.ts));
+  if (!list.length) {
+    tl.innerHTML = `<div class="empty card">${charSvg("#ff6b4f", "#ffa64a", "#edd6ff")}<strong>Nothing logged yet.</strong>Each decision and mistake gets talked out loud and saved here as it happens.</div>`;
+    return;
+  }
+  const groups = new Map();
+  for (const e of list) { const k = dayKey(e.ts); if (!groups.has(k)) groups.set(k, []); groups.get(k).push(e); }
+  const start = new Date(state.sprint.start + "T00:00:00");
+  tl.innerHTML = [...groups.values()].map(g => {
+    const d = new Date(g[0].ts), n = Math.floor((d - start) / 864e5) + 1;
+    return `<div class="day"><div class="day-label">${fmtDate(g[0].ts, { weekday: "short", day: "numeric", month: "short" })}<small>${n >= 1 ? `Day ${n}` : "Before the sprint"} · ${g.reduce((s, e) => s + wordCount(e.raw), 0)} words dictated</small></div>
+      <div class="entries">${g.map(e => `
+        <article class="entry">
+          <span class="kind" data-k="${e.kind}">${esc(KINDS.find(k => k[0] === e.kind)?.[1] || e.kind)}</span><span class="etime">${fmtTime(e.ts)}</span>
+          <h3>${esc(e.title)}</h3>
+          ${e.takeaway ? `<p class="takeaway">${esc(e.takeaway)}</p>` : ""}
+          <details${e.id === list[0].id ? " open" : ""}><summary>Raw dictation <span class="wcount">(${wordCount(e.raw)} words)</span></summary>
+            <pre class="raw-block"><mark>${esc(e.raw)}</mark></pre></details>
+          ${EDIT ? `<button class="btn danger" type="button" data-del="${esc(e.id)}" style="margin-top:10px">Delete entry</button>` : ""}
+        </article>`).join("")}</div></div>`;
+  }).join("");
+}
+$("#kind-chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (b) { kindFilter = b.dataset.f; renderTimeline(); } });
+$("#timeline").addEventListener("click", e => {
+  const b = e.target.closest("[data-del]"); if (!b) return;
+  if (confirm("Delete this log entry?")) { state.log = state.log.filter(x => x.id !== b.dataset.del); save(); renderAll(); }
+});
+
+/* ---------- about, footer, edit bar ---------- */
+
+function renderAbout() {
+  const p = state.profile;
+  const link = (v, pre) => v ? `<a href="${esc(/^https?:/.test(v) ? v : pre + v.replace(/^@/, ""))}">${esc(v)}</a>` : "";
+  const facts = [
+    ["Based in", esc(p.city)],
+    ["Looking for", esc(p.interest)],
+    ["Earliest start", esc(p.startDate)],
+    ["Relocation", esc(p.relocation)],
+    ["Website", link(p.website, "https://")],
+    ["LinkedIn", link(p.linkedin, "https://")],
+    ["GitHub", link(p.github, "https://")],
+    ["X", link(p.x, "https://x.com/")],
+    ["Email", p.email ? `<a href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""]
+  ].filter(([, v]) => v);
+  const fromLog = state.log.filter(e => e.kind === "mistake").map(e => ({ title: e.title, lesson: e.takeaway }));
+  const mistakes = [...(p.mistakes || []), ...fromLog];
+  const built = p.built || [];
+  $("#about-body").innerHTML = `
+    <div>${p.about.length ? p.about.map(t => `<p>${esc(t)}</p>`).join("") : (EDIT ? `<p>Add your paragraphs to <code>profile.about</code> in data.js.</p>` : "")}
+      ${built.length ? `<h3>Things I've built that real people use</h3>
+      <ul class="built">${built.map(b => `<li><b>${esc(b.name)}</b><span>${esc(b.line)}</span></li>`).join("")}</ul>` : ""}
+      ${mistakes.length ? `<h3>Mistakes I've made this week</h3>
+      <ul class="mistakes">${mistakes.map(m => `<li><b>${esc(m.title)}</b>${m.lesson ? `<span>${esc(m.lesson)}</span>` : ""}</li>`).join("")}</ul>` : ""}</div>
+    <dl class="facts">${facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
+  $("#foot").innerHTML = `Built with Wispr Flow for voice input and Emergent for the build. Creator numbers are public figures entered by hand. Scores are my own model, not Wispr Flow's.${p.prototype ? "<br><b>This page currently shows sample data for the creators, replies, voice log and Hinglish results.</b>" : ""}`;
+}
+
+function renderPlan() {
+  const plan = state.profile.plan || [];
+  const hide = !plan.length && !EDIT;
+  $("#plan").hidden = hide; $("#plan-link").hidden = hide;
+  $("#plan-body").innerHTML = plan.length
+    ? plan.map(x => `<article class="plan-card"><span class="pill">${esc(x.when)}</span><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p></article>`).join("")
+    : `<p>Add steps to <code>profile.plan</code> in data.js.</p>`;
+}
+
+/* ---------- extra proof sections (each hides until it has real content) ---------- */
+
+const showTodo = () => !!state.profile.prototype || EDIT;
+const todoCard = (title, prompts) => `<div class="todo"><b>${esc(title)}</b><ul>${prompts.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+  <p>Add this in <code>data.js</code>. Visitors won't see this box once the real site is live.</p></div>`;
+const safeUrl = u => /^(https?:\/\/|[\w./-]+$)/.test(u || "") ? u : "";
+
+function renderQuotes() {
+  const rank = { won: 3, talking: 2, replied: 1 };
+  const list = state.creators.filter(c => c.reply && c.reply.trim() && rank[c.status])
+    .sort((a, b) => rank[b.status] - rank[a.status] || scoreCreator(b).total - scoreCreator(a).total).slice(0, 4);
+  $("#quotes").innerHTML = list.length ? `<h3 class="sub">In their words</h3>
+    <div class="quotes-grid">${list.map(c => `<figure class="quote"><blockquote>“${esc(c.reply)}”</blockquote>
+      <figcaption>${esc(c.name)}, ${esc(c.handle)} on ${esc(c.platform)}</figcaption></figure>`).join("")}</div>` : "";
+}
+
+function renderMyPost() {
+  const p = state.profile.post, el = $("#mypost");
+  if (!p || !p.url) { el.innerHTML = showTodo() ? `<h3 class="sub">My own post about this</h3>${todoCard("Publish the optional LinkedIn or X post early, then add it here", ["The link to the post", "What you wrote", "Real views, likes and replies after a few days"])}` : ""; return; }
+  const st = p.stats || {};
+  el.innerHTML = `<h3 class="sub">My own post about this</h3><div class="post card">
+    <span class="pill">${esc(p.platform || "Post")}</span>
+    <p class="post-text">${esc(p.text || "")}</p>
+    <div class="post-stats">${[["Views", st.views], ["Likes", st.likes], ["Replies", st.replies]].filter(x => x[1] != null).map(([l, v]) => `<div><b>${num(v)}</b><span>${l}</span></div>`).join("")}</div>
+    ${safeUrl(p.url) ? `<a class="btn ghost small" href="${esc(p.url)}" rel="noopener">See the post</a>` : ""}</div>`;
+}
+
+function renderVideos() {
+  const vids = state.profile.videos || [], el = $("#videos");
+  if (!vids.length) { el.innerHTML = showTodo() ? `<h3 class="sub">Watch me use Flow</h3>${todoCard("Add a screen recording of you dictating with Wispr Flow", ["A 30 to 60 second clip: you speaking, the text appearing", "Put the file next to index.html and add its name under profile.videos, or paste a YouTube or Loom embed link"])}` : ""; return; }
+  el.innerHTML = `<h3 class="sub">Watch me use Flow</h3><div class="vids">${vids.map(v => {
+    const src = safeUrl(v.src); if (!src) return "";
+    const embed = /^https:\/\/(www\.)?(youtube\.com\/embed|player\.vimeo\.com|www\.loom\.com\/embed)/.test(src);
+    return `<figure class="vid">${embed
+      ? `<iframe src="${esc(src)}" title="${esc(v.title)}" loading="lazy" allowfullscreen></iframe>`
+      : `<video controls preload="metadata" src="${esc(src)}"></video>`}<figcaption><b>${esc(v.title)}</b>${v.caption ? `<span>${esc(v.caption)}</span>` : ""}</figcaption></figure>`;
+  }).join("")}</div>`;
+}
+
+function renderHinglish() {
+  const h = state.profile.hinglish || {}, runs = h.runs || [];
+  const hide = !runs.length && !showTodo();
+  $("#hinglish").hidden = hide; $("#hinglish-link").hidden = hide;
+  const el = $("#hinglish-body");
+  const runner = EDIT ? hlRunnerHtml() : "";
+  if (!runs.length) { el.innerHTML = runner + todoCard("Run your own Hinglish test", ["Say 15 to 20 real phrases you use: mixed Hindi and English, names, tech words", "For each one, note what Flow wrote and whether it was right", "Write 2 or 3 takeaways about what worked and what broke"]); return; }
+  const ok = runs.filter(r => r.ok).length, pct = Math.round(ok / runs.length * 100);
+  el.innerHTML = `${runner}${state.profile.prototype ? `<p class="sample-note"><span class="pill">Sample results</span> These phrases and results are invented for the prototype.</p>` : ""}
+    <div class="hl-stats">
+      <div class="fstep"><div class="fnum">${runs.length}</div><div class="flabel">Phrases tested</div></div>
+      <div class="fstep"><div class="fnum">${pct}%</div><div class="flabel">Came out right</div><div class="fsub">${ok} of ${runs.length}</div></div>
+      <div class="fstep"><div class="fnum">${runs.length - ok}</div><div class="flabel">Needed a fix</div></div>
+    </div>
+    <div class="hl card" role="table" aria-label="Hinglish test results">
+      <div class="hl-head" role="row"><span role="columnheader">What I said</span><span role="columnheader">What Flow wrote</span><span role="columnheader">Result</span></div>
+      ${runs.map(r => `<div class="hl-row" role="row"><span class="said-t" role="cell">${esc(r.said)}</span>
+        <span role="cell">${esc(r.wrote)}${r.note ? `<small>${esc(r.note)}</small>` : ""}</span>
+        <span role="cell"><span class="pill" data-s="${r.ok ? "talking" : "replied"}">${r.ok ? "Right" : "Needed a fix"}</span></span></div>`).join("")}
+    </div>
+    ${(h.takeaways || []).length ? `<h3 class="sub">What I took from it</h3><ul class="takes">${h.takeaways.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}`;
+}
+
+function renderExperiments() {
+  const ex = state.profile.experiments || [], el = $("#experiments");
+  const ctx = state.profile.context || [];
+  const ctxHtml = ctx.length ? `<h3 class="sub">What I read first</h3><ul class="ctx">${ctx.map(c => `<li><span>${esc(c.text)}</span>${c.url ? ` <a href="${esc(c.url)}" rel="noopener">${esc(c.source)}</a>` : ` <em>${esc(c.source)}</em>`}</li>`).join("")}</ul>` : "";
+  if (!ex.length) { el.innerHTML = showTodo() ? `<h3 class="sub">Three things I'd test first</h3>${todoCard("Add three experiments", ["What you believe, how you'd run it, and the number that would prove you wrong"])}` : ""; return; }
+  el.innerHTML = `${ctxHtml}<h3 class="sub sub-gap">Three things I'd test first</h3><div class="exp-grid">${ex.map(x => `<article class="exp">
+    <span class="pill">${esc(x.effort || "")}</span><h4>${esc(x.title)}</h4>
+    <p><b>If I'm right:</b> ${esc(x.hypothesis)}</p><p><b>How I'd run it:</b> ${esc(x.how)}</p><p><b>How I'd know:</b> ${esc(x.metric)}</p></article>`).join("")}</div>`;
+}
+
+function renderBrief() {
+  const b = state.profile.brief, el = $("#brief");
+  if (!b) { el.innerHTML = ""; return; }
+  const list = (t, a) => a?.length ? `<div><h5>${t}</h5><ul>${a.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>` : "";
+  el.innerHTML = `<h3 class="sub">A creator brief I'd send</h3><div class="brief card">
+    <h4>${esc(b.title)}</h4><p class="angle">${esc(b.angle)}</p>
+    <div class="brief-cols">${list("What I'd ask them to make", b.deliverables)}${list("Hooks to try", b.hooks)}${list("What I'd measure", b.measure)}${list("What I'd avoid", b.avoid)}</div></div>`;
+}
+
+function renderCaseStudy() {
+  const c = state.profile.casestudy, el = $("#casestudy");
+  if (!c) { el.innerHTML = ""; return; }
+  const story = c.story || [];
+  const prompts = ["How did the first 100 students find it?", "Which channel brought the most people?", "What did you try that didn't work?", "What would you do differently?"];
+  el.innerHTML = `<h3 class="sub">${esc(c.title)}</h3>
+    ${c.intro ? `<p class="case-intro">${esc(c.intro)}</p>` : ""}
+    <div class="case-stats">${(c.stats || []).map(x => `<div class="fstep"><div class="fnum">${esc(x.n)}</div><div class="flabel">${esc(x.label)}</div></div>`).join("")}</div>
+    ${story.length ? `<div class="qa">${story.map(x => `<article class="qa-card"><h4>${esc(x.q)}</h4><p>${esc(x.a)}</p></article>`).join("")}</div>` : ""}
+    ${story.length < 2 && showTodo() ? `<div class="case-todo">${todoCard(story.length ? "Add more of the story" : "Tell the growth story behind these numbers", story.length ? prompts.slice(1) : prompts)}</div>` : ""}`;
+}
+
+/* ---------- edit-mode helpers: today panel, Hinglish test runner, video script ---------- */
+
+const ymdKey = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const firstName = n => (n || "").trim().split(/\s+/)[0] || "there";
+const DAILY_LIMIT = 4;
+
+function followUpText(c) {
+  const hi = ["Hinglish", "Hindi"].includes(c.language), me = state.profile.name;
+  return hi
+    ? `Hi ${firstName(c.name)}! Bas ek chhota follow-up, shayad pehla message dab gaya ho. Kya main 45 second ka demo bhej doon? Call se easy rahega.\n\n- ${me}`
+    : `Hi ${firstName(c.name)}, a quick follow-up in case my first message got buried. Would a 45-second demo be easier than a call?\n\n${me}`;
+}
+
+function renderToday() {
+  const el = $("#today");
+  if (!EDIT) { el.innerHTML = ""; return; }
+  const now = new Date(), key = ymdKey(now), sp = state.sprint;
+  const sent = state.creators.filter(c => c.pitchedOn === key).length;
+  const loggedToday = state.log.some(e => ymdKey(new Date(e.ts)) === key);
+  const daysLeft = Math.max(0, Math.ceil((new Date(sp.end + "T23:59:59") - now) / 864e5));
+  const due = state.creators.filter(c => c.status === "pitched" && c.pitchedOn && !hasReply(c) && (new Date(key) - new Date(c.pitchedOn)) / 864e5 >= 3);
+  el.innerHTML = `<div class="today card"><h3 class="sub">Today</h3>
+    <div class="today-stats">
+      <div><b>${sent}/${DAILY_LIMIT}</b><span>messages sent${sent >= DAILY_LIMIT ? ". That's enough for today" : ""}</span></div>
+      <div><b>${loggedToday ? "Yes" : "Not yet"}</b><span>voice log entry today</span></div>
+      <div><b>${due.length}</b><span>follow-ups due</span></div>
+      <div><b>${daysLeft}</b><span>days until submissions close</span></div>
+    </div>
+    ${due.length ? `<ul class="due">${due.map(c => `<li><span><b>${esc(c.name)}</b> on ${esc(c.platform)}, pitched ${fmtDate(c.pitchedOn)}</span><button class="btn ghost small" type="button" data-fu="${esc(c.id)}">Copy follow-up</button></li>`).join("")}</ul>` : `<p class="note">No follow-ups due. A follow-up is due 3 days after a message with no reply.</p>`}
+  </div>`;
+}
+$("#today").addEventListener("click", async e => {
+  const b = e.target.closest("[data-fu]"); if (!b) return;
+  const c = state.creators.find(x => x.id === b.dataset.fu);
+  try { await navigator.clipboard.writeText(followUpText(c)); toast("Follow-up copied"); } catch (err) { toast("Couldn't copy. Select the text manually."); }
+});
+
+/* Hinglish test runner */
+const HL_PHRASES = ["Kal ki meeting ko reschedule kar dena", "Client ko ek follow up email bhej do", "Send me the PR description by evening", "Aaj ka standup skip karte hain", "Mera Next.js build fail ho gaya", "Iska API response kaafi slow hai", "Bhubaneswar mein kal baarish hogi", "Ye invoice kal tak clear kar dena", "Pehle login flow test karo phir deploy", "Please sync with Rohan about the Hinglish pitch", "Iss quarter ka OKR doc share kar do", "Mujhe Postgres ka index samajh nahi aaya", "Aap kal tak review kar sakte ho kya", "Deploy hone ke baad Slack pe ping kar dena", "Ye PR merge karne se pehle tests chala lo", "Sunday ko family function hai, Monday se start karte hain", "Wispr Flow se email likhna kaafi fast hai", "Budget ka sheet Priya ko forward kar do", "Ye feature Q4 mein ship karenge", "Mere ko thoda time chahiye, kal reply karta hoon"];
+const hlNorm = t => String(t || "").toLowerCase().replace(/[-_]/g, " ").replace(/[^\p{L}\p{N}\s]/gu, "").replace(/\s+/g, " ").trim();
+function hlCompare(said, wrote) {
+  if (!hlNorm(wrote)) return null;
+  if (hlNorm(said) === hlNorm(wrote)) return { ok: true, note: "" };
+  const a = hlNorm(said).split(" "), b = hlNorm(wrote).split(" ");
+  const diffs = a.map((w, i) => (w !== b[i] ? `"${w}" became "${b[i] ?? "(nothing)"}"` : null)).filter(Boolean).slice(0, 3);
+  if (b.length > a.length) diffs.push(`${b.length - a.length} extra word${b.length - a.length > 1 ? "s" : ""}`);
+  return { ok: false, note: diffs.join(", ") };
+}
+function hlRunnerHtml() {
+  const row = (said, custom) => `<div class="rn-row${custom ? " custom" : ""}">
+    ${custom ? `<input class="in hl-said" placeholder="Your own phrase" aria-label="Your own phrase">` : `<span class="rn-said">${esc(said)}</span>`}
+    <input class="in hl-in" ${custom ? "" : `data-said="${esc(said)}"`} placeholder="${custom ? "What Flow wrote" : "Click here, then say it with Flow"}" aria-label="What Flow wrote"><span class="rn-res"></span></div>`;
+  return `<details class="runner card" id="hl-runner"><summary>Run the test yourself</summary><div class="runner-body">
+    <p class="note">Say each phrase out loud with Wispr Flow into its box. It marks itself right or wrong and notes the words that changed. Add your own phrases at the bottom. Saving replaces the results on the page.</p>
+    <div class="rn-list">${HL_PHRASES.map(p => row(p, false)).join("")}${row("", true)}${row("", true)}${row("", true)}</div>
+    <div class="row-actions"><button class="btn accent" type="button" id="hl-save">Save results</button><span class="wc" id="hl-count">0 phrases filled</span></div></div></details>`;
+}
+function hlRowState(r) {
+  const inp = r.querySelector(".hl-in");
+  const said = inp.dataset.said ?? r.querySelector(".hl-said")?.value ?? "";
+  const wrote = inp.value;
+  return { said: said.trim(), wrote: wrote.trim(), result: said.trim() ? hlCompare(said, wrote) : null };
+}
+$("#hinglish-body").addEventListener("input", e => {
+  const r = e.target.closest(".rn-row"); if (!r) return;
+  const st = hlRowState(r.querySelector(".hl-in").parentElement);
+  const res = r.querySelector(".rn-res");
+  res.innerHTML = st.result ? `<span class="pill" data-s="${st.result.ok ? "talking" : "replied"}">${st.result.ok ? "Right" : "Needed a fix"}</span>${st.result.note ? `<small>${esc(st.result.note)}</small>` : ""}` : "";
+  const n = $$("#hl-runner .rn-row").filter(x => hlRowState(x).result).length;
+  $("#hl-count").textContent = `${n} phrase${n === 1 ? "" : "s"} filled`;
+});
+$("#hinglish-body").addEventListener("click", e => {
+  if (e.target.id !== "hl-save") return;
+  const runs = $$("#hl-runner .rn-row").map(hlRowState).filter(x => x.result).map(x => ({ said: x.said, wrote: x.wrote, ok: x.result.ok, ...(x.result.note ? { note: x.result.note } : {}) }));
+  if (!runs.length) return toast("Fill in at least one phrase first");
+  const had = (state.profile.hinglish?.runs || []).length;
+  if (had && !confirm(`Replace the ${had} results on the page with these ${runs.length}?`)) return;
+  state.profile.hinglish = { ...(state.profile.hinglish || {}), runs, takeaways: state.profile.prototype ? [] : (state.profile.hinglish?.takeaways || []) };
+  save(); renderAll(); toast(`Saved ${runs.length} results. Now write your takeaways in data.js`);
+});
+
+/* Video script from your actual data */
+function buildScript() {
+  const p = state.profile, cs = state.creators, me = firstName(p.name);
+  const pitched = cs.filter(wasPitched), replied = pitched.filter(hasReply), talking = cs.filter(c => ["talking", "won"].includes(c.status));
+  const rank = { won: 3, talking: 2, replied: 1 };
+  const withMsg = cs.filter(c => c.message && c.message.trim());
+  const worked = withMsg.filter(c => rank[c.status]).sort((a, b) => rank[b.status] - rank[a.status] || scoreCreator(b).total - scoreCreator(a).total)[0];
+  const flop = withMsg.filter(c => c.status === "passed" && !hasReply(c)).sort((a, b) => (b.lesson ? 1 : 0) - (a.lesson ? 1 : 0) || scoreCreator(b).total - scoreCreator(a).total)[0];
+  const words = state.log.reduce((t, e) => t + wordCount(e.raw), 0), days = new Set(state.log.map(e => ymdKey(new Date(e.ts)))).size;
+  const mistake = [...state.log].filter(e => e.kind === "mistake").sort((a, b) => (b.takeaway || "").length - (a.takeaway || "").length)[0];
+  const runs = p.hinglish?.runs || [], pct = runs.length ? Math.round(runs.filter(r => r.ok).length / runs.length * 100) : null;
+  const built = (p.built || [])[0], plan = p.plan || [];
+  const rate = pitched.length ? Math.round(replied.length / pitched.length * 100) : 0;
+  const lines = [
+    p.prototype ? "NOTE: the numbers below come from SAMPLE data. Replace the data with your real results before you record.\n" : "",
+    "0:00 to 0:25   Who I am (face to camera)",
+    `"Hi, I'm ${p.name}, a CS student from ${(p.city || "").split(",")[0] || "India"}. ${built ? `I build things people use, like ${built.name}: ${built.line.replace(/\.$/, "").replace(/^./, ch => ch.toLowerCase())}.` : ""} Instead of sending a résumé, I spent this week doing the job: pitching real creators on Wispr Flow."`,
+    "",
+    "0:25 to 1:15   What I did (screen: the funnel, then the ledger)",
+    `"I found ${cs.length} creators, scored each one with a tool I built, and messaged ${pitched.length}. ${replied.length} replied, that's ${rate}%, and ${talking.length} are open to working together."`,
+    worked ? `"The message that worked was to ${worked.name}. It named one specific moment from their content and made a small ask." [Show the thread.]` : "[Pick your best thread and show it.]",
+    flop ? `"The one that didn't was ${flop.name}. ${flop.lesson || "[What you learned from it.]"}"` : "",
+    "",
+    "1:15 to 2:00   What voice changed (screen: the voice log, raw dictation highlighted)",
+    `"I dictated ${words} words across ${days} days. [Say one real thing that changed: what got faster, or what you noticed about how you think when you talk instead of type.]"`,
+    pct != null ? `"I also tested ${runs.length} Hinglish phrases. ${pct}% came out right, and the misses were [name the real ones]."` : "[Run the Hinglish test and add its result here.]",
+    "",
+    "2:00 to 2:30   What I got wrong",
+    mistake ? `"${mistake.title}. ${mistake.takeaway || ""}"` : "[Pick your best real mistake and what you changed.]",
+    "",
+    "2:30 to 3:00   What I'd do next",
+    plan.length ? `"In month one I'd ${plan[0].title.toLowerCase()}${plan[1] ? `, then ${plan[1].title.toLowerCase()}` : ""}. ${p.startDate ? `I can start ${p.startDate.toLowerCase()}` : "[Your start date]"}${p.relocation ? ` and ${p.relocation.toLowerCase().replace(/^yes, i can/, "I can")}` : ""}."` : "[Your plan for the first month.]",
+    "",
+    `(Spoken at a normal pace this is roughly 2 minutes 45 seconds. Keep it under 3:00 and don't read it word for word.)`
+  ];
+  return lines.filter((l, i) => l !== "" || lines[i - 1] !== "").join("\n");
+}
+function openScript() {
+  const dlg = $("#dlg");
+  dlg.innerHTML = `<form method="dialog" class="dlg"><div><h3>Your 3-minute video script</h3><div class="meta">Built from your current data. Rewrite it in your own voice.</div></div>
+    <textarea class="in" id="script-text" rows="18" aria-label="Video script">${esc(buildScript())}</textarea>
+    <div class="row-actions"><button class="btn accent" type="button" data-act="copy-script">Copy</button><button class="btn ghost" type="button" data-act="close">Close</button></div></form>`;
+  dlg.showModal();
+}
+$("#dlg").addEventListener("click", async e => {
+  if (e.target.dataset?.act !== "copy-script") return;
+  const t = $("#script-text");
+  try { await navigator.clipboard.writeText(t.value); toast("Copied"); } catch (err) { t.select(); }
+});
+
+/* ---------- hero life: characters, spoken quotes ---------- */
+
+let typingTimer;
+function startSaid() {
+  const bar = $("#flowbar"), el = $("#said");
+  clearTimeout(typingTimer);
+  const chunk = t => { t = t.replace(/\s+/g, " ").trim(); if (t.length <= 118) return t; const c = t.slice(0, 118); return c.slice(0, c.lastIndexOf(" ")) + "…"; };
+  const quotes = [...state.log].filter(e => e.raw).sort((a, b) => new Date(b.ts) - new Date(a.ts)).slice(0, 4).map(e => `“${chunk(e.raw)}”`);
+  if (!quotes.length) { bar.hidden = true; return; }
+  bar.hidden = false;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { el.textContent = quotes[0]; bar.classList.add("still"); return; }
+  let qi = 0, ci = 0;
+  const tick = () => {
+    const q = quotes[qi];
+    if (ci <= q.length) { el.textContent = q.slice(0, ci++); typingTimer = setTimeout(tick, 26); }
+    else typingTimer = setTimeout(() => { qi = (qi + 1) % quotes.length; ci = 0; tick(); }, 2800);
+  };
+  tick();
+}
+function drawCharacters() { $$(".char").forEach(el => { el.innerHTML = charMarkup(el.dataset.shirt, el.dataset.hair, el.dataset.lens); }); }
+
+/* ---------- scorer examples ---------- */
+
+const PRESETS = [
+  ["Great fit: Hinglish coding tutorials", { niche: "Coding / dev", language: "Hinglish", contentType: "Tutorials / workflows", platform: "YouTube", followers: 150000, avgViews: 35000, comments: 140, price: 8000, risk: 0 }],
+  ["Big but wrong: gaming channel", { niche: "Gaming / entertainment", language: "Hinglish", contentType: "Entertainment / skits", platform: "YouTube", followers: 900000, avgViews: 65000, comments: 250, price: 90000, risk: 0 }],
+  ["Good niche, too expensive", { niche: "Productivity / workflow", language: "English", contentType: "Tutorials / workflows", platform: "Instagram", followers: 300000, avgViews: 30000, comments: 110, price: 120000, risk: 0 }],
+  ["Promotes a competitor", { niche: "Writing / journalism / newsletters", language: "English", contentType: "Tool reviews", platform: "X", followers: 80000, avgViews: 12000, comments: 50, price: 10000, risk: -20 }]
+];
+function buildPresets() {
+  $("#presets").innerHTML = `<span>Try an example:</span>` + PRESETS.map(([l], i) => `<button class="chip" type="button" data-i="${i}">${esc(l)}</button>`).join("");
+}
+$("#presets").addEventListener("click", e => {
+  const b = e.target.closest("[data-i]"); if (!b) return;
+  F = { ...F, ...PRESETS[+b.dataset.i][1], name: "Example creator", handle: "@example", editingId: null, touched: true };
+  syncForm(); renderResult();
+});
+
+/* ---------- voice input for the log (browser speech recognition) ---------- */
+
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+function setupMic() {
+  const btn = $("#mic"), ta = $("#log-form textarea[name=raw]");
+  if (!btn || !ta) return;
+  if (!SR) { btn.hidden = true; return; }
+  let rec = null;
+  btn.addEventListener("click", () => {
+    if (rec) { rec.stop(); return; }
+    rec = new SR(); rec.lang = "en-IN"; rec.continuous = true; rec.interimResults = false;
+    rec.onresult = ev => {
+      for (let i = ev.resultIndex; i < ev.results.length; i++) {
+        if (ev.results[i].isFinal) ta.value += (ta.value && !/\s$/.test(ta.value) ? " " : "") + ev.results[i][0].transcript.trim();
+      }
+      ta.dispatchEvent(new Event("input", { bubbles: true }));
+    };
+    rec.onerror = () => toast("Couldn't hear anything. Check the microphone permission.");
+    rec.onend = () => { rec = null; btn.textContent = "Dictate here"; btn.classList.remove("on"); };
+    rec.start(); btn.textContent = "Stop"; btn.classList.add("on");
+  });
+}
+
+/* ---------- nav highlight ---------- */
+
+function setupSpy() {
+  const links = $$('.top nav a[href^="#"]');
+  const io = new IntersectionObserver(entries => {
+    for (const en of entries) if (en.isIntersecting) links.forEach(a => {
+      if (a.getAttribute("href") === "#" + en.target.id) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  $$("main section[id]").forEach(sec => io.observe(sec));
+}
+
+/* ---------- submission checklist (edit mode only) ---------- */
+
+function checklistItems() {
+  const p = state.profile, cs = state.creators, pitched = cs.filter(wasPitched);
+  const real = !p.prototype;
+  const days = new Set(state.log.map(e => dayKey(e.ts))).size;
+  const goal = Math.ceil(state.sprint.target * 0.75);
+  const auto = [
+    ["Sample data replaced with real data", real],
+    ["Profile filled in: name, two or more About paragraphs, and a link", real && !!p.name && p.about.length >= 2 && !!(p.linkedin || p.email)],
+    [`${goal}+ creators found and scored`, real && cs.length >= goal],
+    ["8+ creators pitched, each with the message saved", real && pitched.length >= 8 && pitched.every(c => c.message && c.message.trim())],
+    ["At least one reply logged with a lesson", real && cs.some(c => hasReply(c) && c.lesson && c.lesson.trim())],
+    ["Voice log entries on 5 or more different days", real && days >= 5],
+    ["Two or more mistakes written down", real && state.log.filter(e => e.kind === "mistake").length >= 2],
+    ["First-month plan written", real && (p.plan || []).length >= 3],
+    ["Start date and Bangalore answer added", real && !!p.startDate && !!p.relocation],
+    ["Hinglish test with 10 or more phrases", real && (p.hinglish?.runs || []).length >= 10],
+    ["iters.live growth story written", real && (p.casestudy?.story || []).length >= 2],
+    ["Your own post published, with its numbers", real && !!(p.post && p.post.url)],
+    ["Screen recording of you using Flow added", real && (p.videos || []).length >= 1]
+  ].map(([label, done]) => ({ label, done }));
+  const checks = state.checks || {};
+  const manual = [
+    ["rebuilt", "Rebuilt on Emergent, and the link is public"],
+    ["video", "3-minute video recorded"],
+    ["setup", "$3,000 setup pick written"],
+    ["quotes", "Creators OK'd being quoted by name"],
+    ["submit", "Form submitted with the same email as your Flow account"]
+  ].map(([k, label]) => ({ k, label, done: !!checks[k] }));
+  return [...auto, ...manual];
+}
+function updateChecklistCount() {
+  const b = $("#checklist"); if (!b) return;
+  const items = checklistItems();
+  b.textContent = `Checklist ${items.filter(i => i.done).length}/${items.length}`;
+}
+function openChecklist() {
+  const items = checklistItems(), dlg = $("#dlg");
+  dlg.innerHTML = `<form method="dialog" class="dlg">
+    <div><h3>Before you submit</h3><div class="meta">${items.filter(i => i.done).length} of ${items.length} done. The first eight tick themselves from your data.</div></div>
+    <ul class="checks">${items.map(i => i.k
+      ? `<li><label><input type="checkbox" data-check="${i.k}"${i.done ? " checked" : ""}> ${esc(i.label)}</label></li>`
+      : `<li class="${i.done ? "done" : ""}"><span class="mark" aria-hidden="true">${i.done ? "✓" : ""}</span> ${esc(i.label)}<span class="sr"> ${i.done ? "(done)" : "(not yet)"}</span></li>`).join("")}</ul>
+    <div class="row-actions"><button class="btn ghost" type="button" data-act="close">Close</button></div></form>`;
+  dlg.showModal();
+}
+$("#dlg").addEventListener("change", e => {
+  const k = e.target.dataset?.check; if (!k) return;
+  state.checks = { ...(state.checks || {}), [k]: e.target.checked };
+  save(); updateChecklistCount(); openChecklist();
+});
+
+function renderEditBar() {
+  const bar = $("#editbar");
+  if (!EDIT) return;
+  bar.hidden = false;
+  bar.innerHTML = `<span>Edit mode. Only you see this bar. Changes live in this browser until you export.</span>
+    <button class="btn" type="button" id="checklist">Checklist</button>
+    <button class="btn" type="button" id="script">Video script</button>
+    <button class="btn" type="button" id="export">Export data.js</button>
+    <button class="btn ghost" type="button" id="reset">Discard local changes</button>`;
+  $("#checklist").onclick = openChecklist;
+  $("#script").onclick = openScript;
+  $("#export").onclick = () => {
+    const blob = new Blob([`window.SITE_DATA = ${JSON.stringify(state, null, 2)};\n`], { type: "text/javascript" });
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "data.js"; a.click();
+    toast("Replace data.js with this file and redeploy");
+  };
+  $("#reset").onclick = () => { if (confirm("Discard everything you changed in this browser?")) { localStorage.removeItem(STORE); location.reload(); } };
+}
+
+function renderAll() { renderHero(); renderDays(); renderFeatured(); renderLedger(); renderInsights(); renderComposer(); renderTimeline(); renderToday(); renderQuotes(); renderMyPost(); renderVideos(); renderHinglish(); renderPlan(); renderExperiments(); renderBrief(); renderAbout(); renderCaseStudy(); renderResult(); startSaid(); updateChecklistCount(); }
+
+function init() {
+  state = loadState();
+  state.profile.about ||= []; state.profile.mistakes ||= [];
+  $("#demo-banner").hidden = !state.profile.prototype;
+  drawCharacters(); buildScorerForm(); buildModel(); buildPresets(); renderTools(); renderEditBar(); renderAll(); setupSpy();
+}
+
+init();
+})();
+
+</script>
+</body>
+</html>
